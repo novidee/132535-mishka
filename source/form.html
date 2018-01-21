@@ -28,6 +28,33 @@
         </ul>
       </nav>
     </header>
+    <main class="page-main">
+      <header class="page-main__header">
+        <h1 class="page-main__title">Вязание на заказ</h1>
+      </header>
+      <section class="order-form">
+        <p class="order-form__intro">Мы будем рады воплотить в жизнь ваши
+          пожелания! Заполните простую форму заказа и мы свяжемся с вами,
+          чтобы уточнить детали.</p>
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Тип</legend>
+            <div class="form__field radiobutton radiobutton--checked">
+              <input class="radiobutton__control" id="type-interior" type="radio"
+                name="type" checked>
+              <label class="radiobutton__label" for="type-interior">Аксессуар
+                для интерьера</label>
+            </div>
+            <div class="form__field radiobutton">
+              <input class="radiobutton__control" id="type-toy" type="radio"
+                name="type">
+              <label class="radiobutton__label" for="type-toy">Детская
+                игрушка</label>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
     <footer class="page-footer">
       <div class="page-footer__socials socials">
         <ul class="socials__list">
