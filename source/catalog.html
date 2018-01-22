@@ -132,5 +132,36 @@
           href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
+    <div class="modal" aria-hidden="true">
+      <div class="modal__overlay">
+        <div class="modal__container" aria-modal="true">
+          <header class="modal__header">
+            <h3 class="modal__title">Добавить в корзину</h3>
+          </header>
+          <div class="modal__content">
+            <form class="size-form" action="https://echo.htmlacademy.ru"
+              method="post">
+              <div class="size-form__option size-option">
+                <input class="size-option__control" type="radio" id="size-s"
+                  name="size" value="s" checked>
+                <label class="size-option__label" for="size-s">s</label>
+              </div>
+              <div class="size-form__option size-option">
+                <input class="size-option__control" type="radio" id="size-m"
+                  name="size" value="m">
+                <label class="size-option__label" for="size-m">m</label>
+              </div>
+              <div class="size-form__option size-option">
+                <input class="size-option__control" type="radio" id="size-l"
+                  name="size" value="l">
+                <label class="size-option__label" for="size-l">l</label>
+              </div>
+              <input class="size-form__add-to-cart button button--green"
+                type="submit" value="Добавить">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
