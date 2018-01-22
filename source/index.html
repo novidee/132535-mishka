@@ -160,7 +160,7 @@
     </footer>
     <div class="modal" aria-hidden="true">
       <div class="modal__overlay">
-        <div class="modal__container" aria-modal="true">
+        <div class="modal__container" role="dialog" aria-modal="true">
           <header class="modal__header">
             <h3 class="modal__title">Добавить в корзину</h3>
           </header>
@@ -182,6 +182,7 @@
                   name="size" value="l">
                 <label class="size-option__label" for="size-l">l</label>
               </div>
+              <input type="hidden" value="1" name="product-id">
               <input class="size-form__add-to-cart button button--green"
                 type="submit" value="Добавить">
             </form>

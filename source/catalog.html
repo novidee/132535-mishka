@@ -45,7 +45,7 @@
               </header>
               <div class="product__content">
                 <a class="product__name-link" href="#">
-                  <b class="product__name">Зайчик-попрыгайчик</b>
+                  <h3 class="product__name">Зайчик-попрыгайчик</h3>
                 </a>
                 <p class="product__description">Рост 30 см, вес 200 г</p>
               </div>
@@ -66,7 +66,7 @@
               </header>
               <div class="product__content">
                 <a class="product__name-link" href="#">
-                  <b class="product__name">Корзинка для белья</b>
+                  <h3 class="product__name">Корзинка для белья</h3>
                 </a>
                 <p class="product__description">Диаметр 15 см, высота 10 см</p>
               </div>
@@ -87,7 +87,7 @@
               </header>
               <div class="product__content">
                 <a class="product__name-link" href="#">
-                  <b class="product__name">Большая корзинка для игрушек</b>
+                  <h3 class="product__name">Большая корзинка для игрушек</h3>
                 </a>
                 <p class="product__description">Диаметр 30 см, высота 30 см</p>
               </div>
@@ -134,7 +134,7 @@
     </footer>
     <div class="modal" aria-hidden="true">
       <div class="modal__overlay">
-        <div class="modal__container" aria-modal="true">
+        <div class="modal__container" role="dialog" aria-modal="true">
           <header class="modal__header">
             <h3 class="modal__title">Добавить в корзину</h3>
           </header>
@@ -156,6 +156,7 @@
                   name="size" value="l">
                 <label class="size-option__label" for="size-l">l</label>
               </div>
+              <input type="hidden" value="1" name="product-id">
               <input class="size-form__add-to-cart button button--green"
                 type="submit" value="Добавить">
             </form>
