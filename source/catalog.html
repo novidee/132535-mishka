@@ -51,12 +51,11 @@
               </div>
               <footer class="product__footer">
                 <b class="product__price">1 200 руб.</b>
-                <button class="product__add-to-cart" type="button">Добавить
-                  в корзину</button>
+                <a class="product__add-to-cart" href="#">Добавить в корзину</a>
               </footer>
             </article>
           </li>
-          <li>
+          <li class="catalog__item">
             <article class="product">
               <header class="product__header">
                 <a class="product__image-link" href="#">
@@ -72,12 +71,11 @@
               </div>
               <footer class="product__footer">
                 <b class="product__price">690 руб.</b>
-                <button class="product__add-to-cart" type="button">Добавить
-                  в корзину</button>
+                <a class="product__add-to-cart" href="#">Добавить в корзину</a>
               </footer>
             </article>
           </li>
-          <li>
+          <li class="catalog__item">
             <article class="product">
               <header class="product__header">
                 <a class="product__image-link" href="#">
@@ -93,8 +91,7 @@
               </div>
               <footer class="product__footer">
                 <b class="product__price">1 500 руб.</b>
-                <button class="product__add-to-cart" type="button">Добавить
-                  в корзину</button>
+                <a class="product__add-to-cart" href="#">Добавить в корзину</a>
               </footer>
             </article>
           </li>
@@ -102,8 +99,11 @@
       </section>
       <section class="production">
         <h2 class="production__title">Процесс производства</h2>
-        <video class="production__video" src="#" preload="metadata"
-          poster="http://placehold.it/260x150" width="260" height="150"></video>
+        <div class="production__media player">
+          <video class="player__video" src="#" preload="metadata"
+            poster="http://placehold.it/260x150" width="260" height="150"></video>
+          <button class="player__start">Смотреть</button>
+        </div>
         <p class="production__intro">По просьбам наших любимых фолловеров мы
           сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="production__make-order button" href="form.html">Сделать заказ</a>
@@ -133,35 +133,30 @@
       </div>
     </footer>
     <div class="modal" aria-hidden="true">
-      <div class="modal__overlay">
-        <div class="modal__container" role="dialog" aria-modal="true">
-          <header class="modal__header">
-            <h3 class="modal__title">Добавить в корзину</h3>
-          </header>
-          <div class="modal__content">
-            <form class="size-form" action="https://echo.htmlacademy.ru"
-              method="post">
-              <div class="size-form__option size-option">
-                <input class="size-option__control" type="radio" id="size-s"
-                  name="size" value="s" checked>
-                <label class="size-option__label" for="size-s">s</label>
-              </div>
-              <div class="size-form__option size-option">
-                <input class="size-option__control" type="radio" id="size-m"
-                  name="size" value="m">
-                <label class="size-option__label" for="size-m">m</label>
-              </div>
-              <div class="size-form__option size-option">
-                <input class="size-option__control" type="radio" id="size-l"
-                  name="size" value="l">
-                <label class="size-option__label" for="size-l">l</label>
-              </div>
-              <input type="hidden" value="1" name="product-id">
-              <input class="size-form__add-to-cart button button--green"
-                type="submit" value="Добавить">
-            </form>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <b class="modal__title">Добавить в корзину</b>
+        <form class="size-form" action="https://echo.htmlacademy.ru"
+          method="post">
+          <p class="size-form__label">Выберите размер:</p>
+          <div class="size-form__option size-option">
+            <input class="size-option__control" type="radio" id="size-s"
+              name="size" value="s" checked>
+            <label class="size-option__label" for="size-s">s</label>
           </div>
-        </div>
+          <div class="size-form__option size-option">
+            <input class="size-option__control" type="radio" id="size-m"
+              name="size" value="m">
+            <label class="size-option__label" for="size-m">m</label>
+          </div>
+          <div class="size-form__option size-option">
+            <input class="size-option__control" type="radio" id="size-l"
+              name="size" value="l">
+            <label class="size-option__label" for="size-l">l</label>
+          </div>
+          <input type="hidden" value="1" name="product-id">
+          <input class="size-form__add-to-cart button button--green"
+            type="submit" value="Добавить">
+        </form>
       </div>
     </div>
   </body>

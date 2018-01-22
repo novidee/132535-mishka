@@ -27,7 +27,7 @@
       </nav>
     </header>
     <main class="page-main">
-      <header class="page-main__header header-picture">
+      <header class="page-main__header">
         <h1 class="page-main__title">Милые штуки ручной работы для дома</h1>
       </header>
       <section class="product-types">
@@ -65,7 +65,7 @@
         <img class="featured-product__image" src="http://placehold.it/260x315"
           width="260" height="315" alt="Вязаные корзинки">
         <p class="featured-product__price">Цена: 990 руб.</p>
-        <button class="featured-product__make-order button">Заказать</button>
+        <a class="featured-product__make-order button" href="#">Заказать</a>
       </section>
       <section class="advantages">
         <h2 class="advantages__title">Коротко о нас</h2>
@@ -159,35 +159,30 @@
       </div>
     </footer>
     <div class="modal" aria-hidden="true">
-      <div class="modal__overlay">
-        <div class="modal__container" role="dialog" aria-modal="true">
-          <header class="modal__header">
-            <h3 class="modal__title">Добавить в корзину</h3>
-          </header>
-          <div class="modal__content">
-            <form class="size-form" action="https://echo.htmlacademy.ru"
-              method="post">
-              <div class="size-form__option size-option">
-                <input class="size-option__control" type="radio" id="size-s"
-                  name="size" value="s" checked>
-                <label class="size-option__label" for="size-s">s</label>
-              </div>
-              <div class="size-form__option size-option">
-                <input class="size-option__control" type="radio" id="size-m"
-                  name="size" value="m">
-                <label class="size-option__label" for="size-m">m</label>
-              </div>
-              <div class="size-form__option size-option">
-                <input class="size-option__control" type="radio" id="size-l"
-                  name="size" value="l">
-                <label class="size-option__label" for="size-l">l</label>
-              </div>
-              <input type="hidden" value="1" name="product-id">
-              <input class="size-form__add-to-cart button button--green"
-                type="submit" value="Добавить">
-            </form>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <b class="modal__title">Добавить в корзину</b>
+        <form class="size-form" action="https://echo.htmlacademy.ru"
+          method="post">
+          <p class="size-form__label">Выберите размер:</p>
+          <div class="size-form__option size-option">
+            <input class="size-option__control" type="radio" id="size-s"
+              name="size" value="s" checked>
+            <label class="size-option__label" for="size-s">s</label>
           </div>
-        </div>
+          <div class="size-form__option size-option">
+            <input class="size-option__control" type="radio" id="size-m"
+              name="size" value="m">
+            <label class="size-option__label" for="size-m">m</label>
+          </div>
+          <div class="size-form__option size-option">
+            <input class="size-option__control" type="radio" id="size-l"
+              name="size" value="l">
+            <label class="size-option__label" for="size-l">l</label>
+          </div>
+          <input type="hidden" value="1" name="product-id">
+          <input class="size-form__add-to-cart button button--green"
+            type="submit" value="Добавить">
+        </form>
       </div>
     </div>
   </body>
