@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка - форма заказа</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/86x35"
+        <img class="page-header__logo-image" src="img/logo-mobile.svg"
           width="86" height="35" alt="Интернет-магазин «Мишка»">
       </a>
       <nav class="main-nav">
@@ -16,16 +17,18 @@
           type="button"></button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a>Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__search" href="#">Поиск по сайту</a>
+            <a class="site-list__link site-list__link--search" href="#">
+              Поиск по сайту</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__cart" href="#">Корзина: пока пуста</a>
+            <a class="site-list__link site-list__link--cart" href="#">
+              Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
