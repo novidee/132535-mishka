@@ -9,7 +9,8 @@
       <img class="page-header__logo-image" src="http://placehold.it/86x35"
         width="86" height="35" alt="Интернет-магазин «Мишка»">
       <nav class="main-nav">
-        <button class="main-nav__toggler" type="button">Открыть меню</button>
+        <button class="main-nav__toggler" aria-label="Открыть меню"
+          type="button"></button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a href="catalog.html">Каталог товаров</a>
@@ -140,30 +141,37 @@
         <ul class="socials__list">
           <li class="socials__item">
             <a class="socials__link socials__link--instagram"
-              href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+              href="https://www.instagram.com/htmlacademy">
+              <span class="visually-hidden">Мы в Инстаграме</span>
+            </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--facebook"
-              href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+            </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--twitter"
-              href="https://twitter.com/htmlacademy_ru">Мы в Твиттере</a>
+              href="https://twitter.com/htmlacademy_ru">
+              <span class="visually-hidden">Мы в Твиттере</span>
+            </a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link button"
-          href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
       </div>
     </footer>
     <div class="modal" aria-hidden="true">
       <div class="modal__container" role="dialog" aria-modal="true">
         <b class="modal__title">Добавить в корзину</b>
+        <p class="modal__subtitle">Выберите размер:</p>
         <form class="size-form" action="https://echo.htmlacademy.ru"
           method="post">
-          <p class="size-form__label">Выберите размер:</p>
           <div class="size-form__option size-option">
             <input class="size-option__control" type="radio" id="size-s"
               name="size" value="s" checked>
