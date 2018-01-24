@@ -13,4 +13,13 @@
 
 .page-header__logo-image {
   display: block;
+  transition: @transition;
+
+  &:hover {
+    opacity: @hover-opacity;
+  }
+
+  &:active {
+    opacity: @active-opacity;
+  }
 }

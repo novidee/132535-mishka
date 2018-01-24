@@ -1,9 +1,13 @@
 .main-nav {
-  width: 100%;
+  width: @phone-width;
 }
 
 .main-nav__list {
   .reset-list();
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .main-nav__toggler {
