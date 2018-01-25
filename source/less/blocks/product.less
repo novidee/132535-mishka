@@ -1,23 +1,15 @@
 .product {
   border: 1px solid @gray-500;
-
-  &:hover .product__content {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-  }
-
-  &:active .product__content {
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
-  }
 }
 
 .product__image {
   display: block;
   width: 100%;
+  height: auto;
 }
 
 .product__content {
   padding: 30px;
-  transition: box-shadow @transition;
 }
 
 .product__name-link {
