@@ -40,39 +40,43 @@
       <section class="product-types">
         <h2 class="visually-hidden">Типы товаров</h2>
         <ul class="product-types__list">
-          <li class="product-types__item product-types__item--interior">
-            <a href="#">Предметы интерьера</a>
+          <li class="product-types__item">
+            <a class="product-types__link product-types__link--intertior" href="#">
+              Предметы<br>интерьера</a>
           </li>
-          <li class="product-types__item product-types__item--toys">
-            <a href="#">Детские игрушки</a>
+          <li class="product-types__item">
+            <a class="product-types__link product-types__link--toys" href="#">
+              Детские<br>игрушки</a>
           </li>
         </ul>
       </section>
       <section class="featured-product">
-        <header class="featured-product__header">
-          <h2 class="featured-product__title">Вязаные корзинки</h2>
-          <small class="featured-product__tag">Товар недели</small>
-        </header>
-        <p class="featured-product__description">Экологически чистая пряжа,
-          ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="featured-product__params params-product">
-          <tr>
-            <td class="params-product__field">Цвет:</td>
-            <td class="params-product__value">«Тиффани»/серый</td>
-          </tr>
-          <tr>
-            <td class="params-product__field">Диаметр:</td>
-            <td class="params-product__value">25 см</td>
-          </tr>
-          <tr>
-            <td class="params-product__field">Высота:</td>
-            <td class="params-product__value">15 см</td>
-          </tr>
-        </table>
-        <img class="featured-product__image" src="http://placehold.it/260x315"
-          width="260" height="315" alt="Вязаные корзинки">
-        <p class="featured-product__price">Цена: 990 руб.</p>
-        <a class="featured-product__make-order button" href="#">Заказать</a>
+        <div class="container">
+          <header class="featured-product__header">
+            <h2 class="featured-product__title">Вязаные корзинки</h2>
+            <small class="featured-product__tag">Товар недели</small>
+          </header>
+          <p class="featured-product__description">Экологически чистая пряжа,
+            ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <table class="featured-product__params params-product">
+            <tr class="params-product__row">
+              <td class="params-product__field">Цвет:</td>
+              <td class="params-product__value">«Тиффани»/серый</td>
+            </tr>
+            <tr class="params-product__row">
+              <td class="params-product__field">Диаметр:</td>
+              <td class="params-product__value">25 см</td>
+            </tr>
+            <tr class="params-product__row">
+              <td class="params-product__field">Высота:</td>
+              <td class="params-product__value">15 см</td>
+            </tr>
+          </table>
+          <img class="featured-product__image" src="../img/triple-set-mobile@1x.jpg"
+            width="260" height="315" alt="Вязаные корзинки">
+          <p class="featured-product__price">Цена: 990 руб.</p>
+          <a class="featured-product__make-order button" href="#">Заказать</a>
+        </div>
       </section>
       <section class="advantages">
         <h2 class="advantages__title">Коротко о нас</h2>
