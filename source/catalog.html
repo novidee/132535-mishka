@@ -38,80 +38,90 @@
         <h1 class="page-main__title">Каталог товаров</h1>
       </header>
       <section class="catalog">
-        <h2 class="visually-hidden">Список товаров</h2>
-        <ul class="catalog__list">
-          <li class="catalog__item">
-            <article class="product">
-              <header class="product__header">
-                <a class="product__image-link" href="#">
-                  <img class="product__image" src="http://placehold.it/260x195"
-                    width="260" height="195" alt="Зайчик-попрыгайчик">
-                </a>
-              </header>
-              <div class="product__content">
-                <a class="product__name-link" href="#">
-                  <h3 class="product__name">Зайчик-попрыгайчик</h3>
-                </a>
-                <p class="product__description">Рост 30 см, вес 200 г</p>
-              </div>
-              <footer class="product__footer">
-                <b class="product__price">1 200 руб.</b>
-                <a class="product__add-to-cart" href="#">Добавить в корзину</a>
-              </footer>
-            </article>
-          </li>
-          <li class="catalog__item">
-            <article class="product">
-              <header class="product__header">
-                <a class="product__image-link" href="#">
-                  <img class="product__image" src="http://placehold.it/260x195"
-                    width="260" height="195" alt="Корзинка для белья">
-                </a>
-              </header>
-              <div class="product__content">
-                <a class="product__name-link" href="#">
-                  <h3 class="product__name">Корзинка для белья</h3>
-                </a>
-                <p class="product__description">Диаметр 15 см, высота 10 см</p>
-              </div>
-              <footer class="product__footer">
-                <b class="product__price">690 руб.</b>
-                <a class="product__add-to-cart" href="#">Добавить в корзину</a>
-              </footer>
-            </article>
-          </li>
-          <li class="catalog__item">
-            <article class="product">
-              <header class="product__header">
-                <a class="product__image-link" href="#">
-                  <img class="product__image" src="http://placehold.it/260x195"
-                    width="260" height="195" alt="Большая корзинка для игрушек">
-                </a>
-              </header>
-              <div class="product__content">
-                <a class="product__name-link" href="#">
-                  <h3 class="product__name">Большая корзинка для игрушек</h3>
-                </a>
-                <p class="product__description">Диаметр 30 см, высота 30 см</p>
-              </div>
-              <footer class="product__footer">
-                <b class="product__price">1 500 руб.</b>
-                <a class="product__add-to-cart" href="#">Добавить в корзину</a>
-              </footer>
-            </article>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="visually-hidden">Список товаров</h2>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <article class="product">
+                <header class="product__header">
+                  <a class="product__image-link" href="#">
+                    <img class="product__image" src="../../img/photo-hare-mobile@1x.jpg"
+                      width="260" height="195" alt="Зайчик-попрыгайчик">
+                  </a>
+                </header>
+                <div class="product__content">
+                  <a class="product__name-link" href="#">
+                    <h3 class="product__name">Зайчик-попрыгайчик</h3>
+                  </a>
+                  <p class="product__description">Рост 30 см, вес 200 г</p>
+                  <div class="product__buy">
+                    <b class="product__price">1 200 руб.</b>
+                    <a class="product__add-to-cart" href="#">
+                      <span class="visually-hidden">Добавить в корзину</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product">
+                <header class="product__header">
+                  <a class="product__image-link" href="#">
+                    <img class="product__image" src="../../img/photo-bowl-mobile@1x.jpg"
+                      width="260" height="195" alt="Корзинка для белья">
+                  </a>
+                </header>
+                <div class="product__content">
+                  <a class="product__name-link" href="#">
+                    <h3 class="product__name">Корзинка для белья</h3>
+                  </a>
+                  <p class="product__description">Диаметр 15 см, высота 10 см</p>
+                  <div class="product__buy">
+                    <b class="product__price">690 руб.</b>
+                    <a class="product__add-to-cart" href="#">
+                      <span class="visually-hidden">Добавить в корзину</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product">
+                <header class="product__header">
+                  <a class="product__image-link" href="#">
+                    <img class="product__image" src="../../img/photo-toys-mobile@1x.jpg"
+                      width="260" height="195" alt="Большая корзинка для игрушек">
+                  </a>
+                </header>
+                <div class="product__content">
+                  <a class="product__name-link" href="#">
+                    <h3 class="product__name">Большая корзинка для игрушек</h3>
+                  </a>
+                  <p class="product__description">Диаметр 30 см, высота 30 см</p>
+                  <div class="product__buy">
+                    <b class="product__price">1 500 руб.</b>
+                    <a class="product__add-to-cart" href="#">
+                      <span class="visually-hidden">Добавить в корзину</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="production">
-        <h2 class="production__title">Процесс производства</h2>
-        <div class="production__media player">
-          <video class="player__video" src="#" preload="metadata"
-            poster="http://placehold.it/260x150" width="260" height="150"></video>
-          <a class="player__start" href="#">Смотреть</a>
+        <div class="container">
+          <h2 class="production__title">Процесс производства</h2>
+          <div class="production__media player">
+            <video class="player__video" src="#" preload="metadata"
+              poster="http://placehold.it/260x150" width="260" height="150"></video>
+            <a class="player__start" href="#">Смотреть</a>
+          </div>
+          <p class="production__intro">По просьбам наших любимых фолловеров мы
+            сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="production__make-order button" href="form.html">Сделать заказ</a>
         </div>
-        <p class="production__intro">По просьбам наших любимых фолловеров мы
-          сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="production__make-order button" href="form.html">Сделать заказ</a>
       </section>
     </main>
     <footer class="page-footer">
