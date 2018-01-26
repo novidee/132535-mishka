@@ -1,0 +1,27 @@
+.input {
+  font-size: 0;
+}
+
+.input__label {
+  .form-label();
+}
+
+.input__control {
+  .placeholder();
+
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 17px;
+  line-height: 1;
+  color: @gray--darker;
+  border: none;
+  border-bottom: 2px solid black;
+  transition: border-color @transition;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: @green;
+  }
+}

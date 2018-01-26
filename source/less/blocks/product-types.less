@@ -1,0 +1,40 @@
+.product-types {
+  margin-bottom: 34px;
+}
+
+.product-types__list {
+  .reset-list();
+}
+
+.product-types__link {
+  display: block;
+  padding: 29px 30px;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.26;
+  text-decoration: none;
+  color: white;
+  transition: color @transition;
+
+  &:active {
+    color: rgba(255, 255, 255, @active-opacity);
+  }
+}
+
+.product-types__link--intertior {
+  background: @green;
+
+  &:hover,
+  &:active {
+    background: @green--light;
+  }
+}
+
+.product-types__link--toys {
+  background: @green--darker;
+
+  &:hover,
+  &:active {
+    background: @green--dark;
+  }
+}

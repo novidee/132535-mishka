@@ -1,0 +1,64 @@
+.reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form-label() {
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.placeholder() {
+  &::placeholder {
+    font-size: 17px;
+    line-height: 1;
+    color: @gray--dark;
+  }
+}
+
+.custom-toggler-container() {
+  position: relative;
+  padding-left: 63px;
+}
+
+.custom-toggler-label(@size) {
+  .form-label();
+
+  display: inline-flex;
+  align-items: center;
+  min-height: @size;
+  transition: color @transition;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: @size;
+    height: @size;
+    content: "";
+    transition: @transition;
+  }
+
+  &:hover {
+    color: @green;
+
+    &::after,
+    &::before {
+      border-color: @green;
+    }
+  }
+
+  &:active {
+    color: @gray--dark;
+
+    &::after,
+    &::before {
+      border-color: @gray--dark;
+    }
+  }
+}

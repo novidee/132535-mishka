@@ -1,0 +1,28 @@
+.size-option {
+  margin-bottom: 30px;
+}
+
+.size-option__control {
+  &:checked + .size-option__label {
+    border-color: @green;
+  }
+}
+
+.size-option__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 52px;
+  font-size: 17px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: 2px solid @gray;
+  cursor: pointer;
+  transition: border-color @transition;
+
+  &:hover {
+    border-color: @gray--darker;
+  }
+}
