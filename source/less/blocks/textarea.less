@@ -1,0 +1,20 @@
+.textarea {
+  font-size: 0;
+}
+
+.textarea__control {
+  .placeholder();
+
+  width: 100%;
+  min-height: 142px;
+  padding: 18px;
+  border: 2px solid black;
+  resize: vertical;
+  transition: border-color @transition;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: @green-500;
+  }
+}
