@@ -7,13 +7,28 @@
   line-height: 2;
   color: @gray--darker;
 
+  .tablet-up({
+    flex-basis: 50%;
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.76;
+  });
+
+  .desktop-up({
+    margin-bottom: 36px;
+  });
+
   &:last-child {
     margin-bottom: 0;
   }
 }
 
 .item-contact__field {
-  min-width: 32%;
+  padding-right: 32px;
+
+  .tablet-up({
+    padding-right: 26px;
+  });
 }
 
 .item-contact__value {

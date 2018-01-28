@@ -1,11 +1,15 @@
 .advantages {
-  margin-bottom: 60px;
+  margin-bottom: 58px;
   line-height: 1.2;
+
+  .tablet-up({
+    margin-bottom: 80px;
+  });
 }
 
 .advantages__container {
   .desktop-up({
-    max-width: 700px;
+    max-width: @col-width * 4;
   });
 }
 
@@ -14,14 +18,12 @@
   font-size: 25px;
 
   .tablet-up({
+    .tablet-title();
     margin-bottom: 45px;
-    font-size: 43px;
-    line-height: 1.16;
   });
 
   .desktop-up({
-    font-size: 53px;
-    line-height: 1.07;
+    .desktop-title();
   });
 }
 
