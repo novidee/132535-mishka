@@ -62,3 +62,15 @@
     }
   }
 }
+
+.tablet-up(@rules) {
+  @media (min-width: @tablet-width) {
+    @rules();
+  }
+}
+
+.desktop-up(@rules) {
+  @media (min-width: @desktop-width) {
+    @rules();
+  }
+}

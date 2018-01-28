@@ -1,0 +1,25 @@
+.user-list {
+  .tablet-up({
+    display: flex;
+  });
+}
+
+.user-list__link {
+  .tablet-up({
+    padding: 33px;
+    border-left: 1px solid @gray;
+  });
+
+  &--cart {
+    .tablet-up({
+      max-width: 300px;
+      padding-right: 0;
+    });
+  }
+}
+
+.user-list__search-text {
+  .tablet-up({
+    display: none;
+  });
+}
