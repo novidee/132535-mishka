@@ -1,3 +1,13 @@
 .container {
+  max-width: @phone-width;
+  margin: 0 auto;
   padding: 0 30px;
+
+  .tablet-up({
+    max-width: @tablet-width;
+  });
+
+  .desktop-up({
+    max-width: @desktop-width;
+  });
 }
