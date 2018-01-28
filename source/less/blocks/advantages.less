@@ -3,19 +3,78 @@
   line-height: 1.2;
 }
 
+.advantages__container {
+  .desktop-up({
+    max-width: 700px;
+  });
+}
+
 .advantages__title {
   margin: 0 0 30px;
   font-size: 25px;
+
+  .tablet-up({
+    margin-bottom: 45px;
+    font-size: 43px;
+    line-height: 1.16;
+  });
+
+  .desktop-up({
+    font-size: 53px;
+    line-height: 1.07;
+  });
 }
 
 .advantages__list {
   .reset-list();
+
+  .tablet-up({
+    display: flex;
+    flex-wrap: wrap;
+  });
 }
 
 .advantages__item {
   margin-bottom: 30px;
   font-size: 17px;
   font-weight: bold;
+
+  .tablet-up({
+    flex-basis: 50%;
+    margin-bottom: 60px;
+    font-size: 20px;
+    line-height: 1.1;
+  });
+
+  &--love {
+    .tablet-up({
+      order: 1;
+    });
+  }
+
+  &--style {
+    .tablet-up({
+      order: 2;
+    });
+  }
+
+  &--support {
+    .tablet-up({
+      order: 3;
+    });
+  }
+
+  &--likes {
+    .tablet-up({
+      order: 4;
+    });
+  }
+
+  &--gift {
+    .tablet-up({
+      order: 5;
+    });
+  }
 
   &:last-child {
     margin-bottom: 0;
