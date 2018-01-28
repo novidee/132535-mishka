@@ -1,6 +1,28 @@
 .page-footer {
-  padding-bottom: 30px;
+  padding-bottom: 26px;
   background: @gray--light;
+
+  .tablet-up({
+    padding: 0;
+  });
+}
+
+.page-footer__container {
+  .tablet-up({
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 143px;
+  });
+}
+
+.page-footer__logo-image {
+  display: none;
+  height: auto;
+
+  .tablet-up({
+    display: block;
+  });
 }
 
 .page-footer__socials {
