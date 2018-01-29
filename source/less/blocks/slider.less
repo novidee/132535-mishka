@@ -1,5 +1,8 @@
 .slider {
-  position: relative;
+  .tablet-up({
+    display: flex;
+    flex-direction: column;
+  });
 }
 
 .slider__controls {
@@ -9,14 +12,9 @@
   border: 1px solid @gray;
 
   .tablet-up({
-    position: absolute;
-    right: 0;
-    bottom: 50px;
+    margin-top: -52px;
+    margin-left: auto;
     border: none;
-  });
-
-  .desktop-up({
-    bottom: 80px;
   });
 }
 
