@@ -80,6 +80,22 @@
   flex-wrap: wrap;
 }
 
+.form__fields--checkboxes .form__field {
+  .tablet-up({
+    flex-basis: 100% / 2;
+    &:nth-child(-n + 2) {
+      margin-top: 0;
+    }
+  });
+
+  .desktop-up({
+    flex-basis: 100% / 3;
+    &:nth-child(-n + 3) {
+      margin-top: 0;
+    }
+  });
+}
+
 .form__field {
   flex-basis: 100%;
   margin-top: 22px;
