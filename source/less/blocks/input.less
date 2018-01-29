@@ -1,9 +1,19 @@
 .input {
   font-size: 0;
+
+  .tablet-up({
+    display: flex;
+    align-items: center;
+  });
 }
 
 .input__label {
   .form-label();
+
+  .tablet-up({
+    padding-right: 30px;
+    font-size: 19px;
+  });
 }
 
 .input__control {
@@ -17,7 +27,12 @@
   color: @gray--darker;
   border: none;
   border-bottom: 2px solid black;
+  background: transparent;
   transition: border-color @transition;
+
+  .tablet-up({
+    font-size: 19px;
+  });
 
   &:hover,
   &:active,

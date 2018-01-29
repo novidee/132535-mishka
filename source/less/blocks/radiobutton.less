@@ -1,22 +1,37 @@
 .radiobutton {
   .custom-toggler-container();
+
+  .tablet-up({
+    padding-left: 80px;
+  });
 }
 
-.radiobutton__control {
-  &:checked + .radiobutton__label {
-    &::after {
-      background: @green;
-      box-shadow: inset 0 0 0 10px white;
-    }
+.radiobutton__control:checked + .radiobutton__label {
+  &::after {
+    background: @green;
+    box-shadow: inset 0 0 0 10px white;
+
+    .tablet-up({
+      box-shadow: inset 0 0 0 13px white;
+    });
   }
 }
 
 .radiobutton__label {
   .custom-toggler-label(38px);
+  .tablet-up({
+    min-height: 52px;
+    font-size: 19px;
+  });
 
   &::before,
   &::after {
     border: 2px solid @gray--darker;
     border-radius: 50%;
+
+    .tablet-up({
+      width: 52px;
+      height: 52px;
+    });
   }
 }
