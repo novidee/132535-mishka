@@ -10,7 +10,7 @@
 
   .tablet-up({
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
     max-width: @tablet-width - 100px;
   });
 
@@ -19,38 +19,13 @@
   });
 }
 
-.page-header__logo {
-  padding: 22px 0;
-
-  .desktop-up({
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  });
-}
-
-.page-header__logo-image {
-  display: block;
-  transition: @transition;
-
-  &:hover {
-    opacity: @hover-opacity;
-  }
-
-  &:active {
-    opacity: @active-opacity;
-  }
-}
-
 .page-header__delivery {
   display: none;
   color: @gray--darker;
 
   .tablet-up({
-    position: absolute;
-    top: 100%;
-    right: 0;
     display: block;
-    margin-top: 20px;
+    margin-bottom: -64px;
+    margin-left: auto;
   });
 }

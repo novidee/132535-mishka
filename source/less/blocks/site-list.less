@@ -1,13 +1,15 @@
 .site-list {
   .tablet-up({
-    position: absolute;
-    top: 100%;
-    left: 0;
     display: flex;
+    order: 1;
+    margin-bottom: -64px;
+    margin-right: auto;
   });
 
   .desktop-up({
-    position: static;
+    flex-basis: 40%;
+    order: -1;
+    margin: 0;
   });
 }
 
