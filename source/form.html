@@ -137,31 +137,37 @@
               </div>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset--phone">
-            <legend class="form__legend">Тел</legend>
-            <div class="form__field input input--phone">
-              <input class="input__control" type="tel" name="phone"
-                placeholder="+7 ХХХ ХХ ХХ*" aria-label="Телефон" required>
+          <fieldset class="form__fieldset form__fieldset--contacts">
+            <div class="container">
+              <div class="form__field input input--phone">
+                <label class="input__label input__label--green" for="phone">
+                  Тел</label>
+                <input class="input__control" type="tel" id="phone" name="phone"
+                  placeholder="+7 ХХХ ХХ ХХ*" required>
+              </div>
+              <div class="form__field input input--email">
+                <label class="input__label input__label--green" for="e-mail">
+                  E-mail</label>
+                <input class="input__control" type="email" id="e-mail" name="email"
+                  placeholder="Ваш Email*" required>
+              </div>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset--email">
-            <legend class="form__legend">E-mail</legend>
-            <div class="form__field input input--email">
-              <input class="input__control" type="email" name="email"
-                placeholder="Ваш Email*" aria-label="e-mail" required>
+          <fieldset class="form__fieldset form__fieldset--note">
+            <div class="container">
+              <legend class="form__legend">Доп</legend>
+              <div class="form__field textarea">
+                <textarea class="textarea__control" rows="6" name="info"
+                  placeholder="Опишите все ваши пожелания к заказу"
+                  aria-label="Дополнительная информация"></textarea>
+              </div>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Доп</legend>
-            <div class="form__field textarea">
-              <textarea class="textarea__control" rows="6" name="info"
-                placeholder="Опишите все ваши пожелания к заказу"
-                aria-label="Дополнительная информация"></textarea>
-            </div>
-          </fieldset>
-          <small class="form__note">*Поля обязательны для заполнения</small>
-          <input class="form__submit-button button" type="submit"
-            value="Отправить заказ">
+          <footer class="form__footer">
+            <small class="form__note">*Поля обязательны для заполнения</small>
+            <input class="form__submit-button button" type="submit"
+              value="Отправить заказ">
+          </footer>
         </form>
       </section>
     </main>
