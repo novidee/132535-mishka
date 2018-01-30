@@ -5,11 +5,15 @@
   .tablet-up({
     margin-bottom: 80px;
   });
+
+  .desktop-up({
+    margin-bottom: 90px;
+  });
 }
 
 .advantages__container {
   .desktop-up({
-    max-width: @col-width * 4;
+    max-width: @col-width * 4 + 100px;
   });
 }
 
@@ -80,5 +84,11 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &:nth-child(n + 3) {
+    .tablet-up({
+      margin-bottom: 0;
+    });
   }
 }

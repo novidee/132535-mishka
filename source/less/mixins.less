@@ -73,17 +73,17 @@
   }
 }
 
+.tablet-down(@rules) {
+  @media (max-width: (@tablet-width - 1px)) {
+    @rules();
+  }
+}
+
 .desktop-up(@rules) {
   @media (min-width: @desktop-width) {
     @rules();
   }
 }
-
-// .small-desktop-up(@rules) {
-//   @media (min-width: 1150px) {
-//     @rules();
-//   }
-// }
 
 .tablet-title {
   font-size: 43px;

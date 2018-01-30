@@ -12,9 +12,9 @@
     }
   });
 
-  &--fullname .form__fields {
+  &--fullname .container {
     .desktop-up({
-      padding-right: @col-width;
+      padding-right: @col-width + 50px;
     });
   }
 
@@ -24,7 +24,7 @@
     flex-direction: column;
 
     .desktop-up({
-      padding-right: @col-width;
+      padding-right: @col-width + 50px;
     });
   }
 
@@ -95,6 +95,10 @@
 .form__fields {
   display: flex;
   flex-wrap: wrap;
+}
+
+.form__fields--checkboxes {
+  padding-right: 90px;
 }
 
 .form__fields--checkboxes .form__field {

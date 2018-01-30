@@ -1,21 +1,20 @@
 .page-header {
-  position: relative;
+  box-shadow: inset 0 -1px 0 0 @gray;
+}
+
+.page-header__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: @phone-width;
-  margin: 0 auto;
-  box-shadow: 0 1px 0 0 @gray;
+
+  .tablet-down({
+    padding: 0;
+  });
 
   .tablet-up({
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: @tablet-width - 100px;
-  });
-
-  .desktop-up({
-    max-width: @desktop-width - 200px;
   });
 }
 

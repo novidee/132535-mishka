@@ -1,5 +1,4 @@
 .product-types {
-  position: relative;
   margin-bottom: 34px;
 
   .tablet-up({
@@ -12,19 +11,12 @@
 }
 
 .product-types__container {
-  padding: 0;
-
-  .tablet-up({
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    width: 100%;
-    max-width: @tablet-width - 100px;
-    transform: translateX(-50%);
+  .tablet-down({
+    padding: 0;
   });
 
-  .desktop-up({
-    max-width: @desktop-width - 200px;
+  .tablet-up({
+    margin-top: -120px;
   });
 }
 
