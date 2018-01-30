@@ -85,6 +85,12 @@
   }
 }
 
+.tablet-up-desktop(@rules) {
+  @media (min-width: @tablet-width) and (max-width: (@desktop-width - 1px)) {
+    @rules();
+  }
+}
+
 .tablet-title {
   font-size: 43px;
   line-height: 1.16;
