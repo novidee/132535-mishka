@@ -1,5 +1,6 @@
 .modal {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -16,24 +17,43 @@
   top: 50%;
   left: 50%;
   width: 320px;
-  padding: 36px 30px 46px;
+  padding: 30px 30px 46px;
   border: 1px solid @gray--dark;
   background: white;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
   transform: translate(-50%, -50%);
+
+  .tablet-up({
+    width: 566px;
+    padding: 32px 0 46px;
+  });
 }
 
 .modal__title {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 28px;
+  display: block;
+  width: 163px;
+  margin: 0 auto 15px;
+  padding-left: 10px;
   font-size: 25px;
   line-height: 1.2;
-  text-align: center;
   text-transform: uppercase;
+
+  .tablet-up({
+    width: 100%;
+    padding: 0;
+    font-size: 30px;
+    line-height: 1.9;
+    text-align: center;
+  });
 }
 
 .modal__subtitle {
-  margin: 0 0 28px;
+  margin: 0 0 25px;
   text-align: center;
+
+  .tablet-up({
+    margin-bottom: 22px;
+    font-size: 17px;
+    line-height: 1.76;
+  });
 }
