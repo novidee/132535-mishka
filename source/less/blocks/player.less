@@ -7,12 +7,26 @@
   display: inline-block;
   width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
 .player__start {
   position: absolute;
   top: 50%;
   left: 50%;
+  display: block;
+  width: 101px;
+  height: 77px;
+  background: @green;
+  cursor: pointer;
+  transition: @transition;
   transform: translate(-50%, -50%);
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:active {
+    opacity: @active-opacity;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
 }
