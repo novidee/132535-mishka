@@ -63,7 +63,7 @@
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form__fieldset">
             <div class="form__fieldset-container container">
-              <legend class="form__legend">Тип</legend>
+              <span class="form__legend">Тип</span>
               <div class="form__fields">
                 <div class="form__field radiobutton">
                   <input class="radiobutton__control visually-hidden" type="radio"
@@ -82,7 +82,7 @@
           </fieldset>
           <fieldset class="form__fieldset">
             <div class="form__fieldset-container container">
-              <legend class="form__legend">Цвет</legend>
+              <span class="form__legend">Цвет</span>
               <div class="form__fields form__fields--checkboxes">
                 <div class="form__field checkbox">
                   <input class="checkbox__control visually-hidden" type="checkbox"
@@ -119,7 +119,7 @@
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--fullname">
             <div class="form__fieldset-container container">
-              <legend class="form__legend">ФИО</legend>
+              <span class="form__legend">ФИО</span>
               <div class="form__fields">
                 <div class="form__field input">
                   <label class="input__label" for="person-name">Имя:</label>
@@ -157,9 +157,10 @@
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--note">
             <div class="container">
-              <legend class="form__legend">Доп</legend>
               <div class="form__field textarea">
-                <textarea class="textarea__control" rows="6" name="info"
+                <label class="textarea__label textarea__label--green" for="info">
+                  Доп</label>
+                <textarea class="textarea__control" id="info" rows="6" name="info"
                   placeholder="Опишите все ваши пожелания к заказу"
                   aria-label="Дополнительная информация"></textarea>
               </div>

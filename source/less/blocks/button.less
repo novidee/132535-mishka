@@ -9,11 +9,13 @@
   text-transform: uppercase;
   color: @gray--darker;
   border: 2px solid @gray--darker;
+  outline: none;
   background: white;
   cursor: pointer;
   transition: @transition;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: white;
     background: @gray--darker;
   }
@@ -28,7 +30,8 @@
     border-color: @green;
     background: @green;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: @green--darker;
       background: @green--darker;
     }

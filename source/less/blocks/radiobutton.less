@@ -6,6 +6,10 @@
   });
 }
 
+.radiobutton__control:focus + .radiobutton__label {
+  color: @green;
+}
+
 .radiobutton__control:checked + .radiobutton__label {
   &::after {
     background: @green;

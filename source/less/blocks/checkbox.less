@@ -1,8 +1,13 @@
 .checkbox {
   .custom-toggler-container();
+
   .tablet-up({
     padding-left: 80px;
   });
+}
+
+.checkbox__control:focus + .checkbox__label {
+  color: @green;
 }
 
 .checkbox__control:checked + .checkbox__label {
@@ -20,6 +25,7 @@
 
 .checkbox__label {
   .custom-toggler-label(40px);
+
   .tablet-up({
     min-height: 52px;
     font-size: 19px;
