@@ -17,6 +17,10 @@
     font-size: 17px;
     line-height: 1;
     color: @gray--dark;
+
+    .tablet-up({
+      font-size: 19px;
+    });
   }
 }
 
@@ -61,4 +65,44 @@
       border-color: @gray--dark;
     }
   }
+}
+
+.tablet-up(@rules) {
+  @media (min-width: @tablet-width) {
+    @rules();
+  }
+}
+
+.tablet-down(@rules) {
+  @media (max-width: (@tablet-width - 1px)) {
+    @rules();
+  }
+}
+
+.desktop-up(@rules) {
+  @media (min-width: @desktop-width) {
+    @rules();
+  }
+}
+
+.desktop-down(@rules) {
+  @media (max-width: (@desktop-width - 1px)) {
+    @rules();
+  }
+}
+
+.tablet-up-desktop(@rules) {
+  @media (min-width: @tablet-width) and (max-width: (@desktop-width - 1px)) {
+    @rules();
+  }
+}
+
+.tablet-title {
+  font-size: 43px;
+  line-height: 1.16;
+}
+
+.desktop-title {
+  font-size: 53px;
+  line-height: 1.08;
 }

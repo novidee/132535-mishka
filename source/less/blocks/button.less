@@ -1,6 +1,6 @@
 .button {
   display: inline-block;
-  padding: 15px 20px;
+  padding: 15px 38px;
   font-size: 17px;
   font-weight: bold;
   line-height: 1.1;
@@ -9,17 +9,19 @@
   text-transform: uppercase;
   color: @gray--darker;
   border: 2px solid @gray--darker;
+  outline: none;
   background: white;
   cursor: pointer;
   transition: @transition;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: white;
     background: @gray--darker;
   }
 
   &:active {
-    color: rgba(255, 255, 255, @active-opacity);
+    color: fade(white, @active-opacity * 100%);
     background: @gray--darker;
   }
 
@@ -28,7 +30,8 @@
     border-color: @green;
     background: @green;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: @green--darker;
       background: @green--darker;
     }

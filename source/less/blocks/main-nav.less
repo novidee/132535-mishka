@@ -1,12 +1,115 @@
 .main-nav {
-  width: @phone-width;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .tablet-up({
+    flex-direction: row;
+    justify-content: flex-end;
+  });
+
+  .desktop-up({
+    justify-content: space-between;
+  });
 }
 
 .main-nav__list {
   .reset-list();
 
-  &--hidden {
+  .tablet-down({
+    &:first-of-type,
+    &:last-of-type {
+      display: none;
+    }
+  });
+}
+
+.main-nav__logo {
+  margin: auto;
+  padding: 22px 0;
+
+  .tablet-up({
+    margin-left: 0;
+  });
+
+  .desktop-up({
+    margin: auto;
+  });
+}
+
+.main-nav__logo-image {
+  display: block;
+  transition: @transition;
+
+  &:hover {
+    opacity: @hover-opacity;
+  }
+
+  &:active {
+    opacity: @active-opacity;
+  }
+}
+
+.main-nav__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 27px 0 28px 76px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+  text-decoration: none;
+  color: black;
+  border-top: 1px solid @gray;
+  transition: color @transition;
+
+  .tablet-up({
+    border-top: none;
+  });
+
+  &:hover {
+    color: fade(black, @hover-opacity * 100%);
+  }
+
+  &:active {
+    color: fade(black, @active-opacity * 100%);
+  }
+}
+
+.main-nav--nojs,
+.main-nav--opened {
+  .tablet-down({
+    .main-nav__list:first-of-type,
+    .main-nav__list:last-of-type {
+      display: block;
+    }
+  });
+}
+
+.main-nav--nojs {
+  .main-nav__toggler {
     display: none;
+  }
+}
+
+.main-nav--opened {
+  .main-nav__toggler {
+    &::after,
+    &::before {
+      top: 50%;
+      margin-top: -1px;
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: scale(1.3) rotate(45deg);
+    }
+
+    &::before {
+      transform: scale(1.3) rotate(-45deg);
+    }
   }
 }
 
@@ -14,6 +117,36 @@
   position: absolute;
   top: 30px;
   right: 30px;
-  width: 22px;
-  height: 22px;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  outline-offset: 6px;
+  background: white;
+  cursor: pointer;
+
+  .tablet-up({
+    display: none;
+  });
+
+  &::after,
+  &::before {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: black;
+    content: "";
+    transition: @transition;
+  }
+
+  &::after {
+    top: 3px;
+    box-shadow: 0 6px 0 0 black, 0 12px 0 0 black;
+  }
+
+  &::before {
+    margin-top: -1px;
+  }
 }

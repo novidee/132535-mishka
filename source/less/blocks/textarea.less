@@ -1,5 +1,11 @@
 .textarea {
+  display: flex;
+  flex-direction: column;
   font-size: 0;
+
+  .tablet-up({
+    flex-direction: row;
+  });
 }
 
 .textarea__control {
@@ -8,7 +14,9 @@
   width: 100%;
   min-height: 142px;
   padding: 18px;
+  font-size: 17px;
   border: 2px solid black;
+  outline: none;
   resize: vertical;
   transition: border-color @transition;
 
@@ -16,5 +24,53 @@
   &:active,
   &:focus {
     border-color: @green;
+  }
+}
+
+.textarea__label {
+  .form-label();
+
+  align-self: flex-start;
+  margin-bottom: 24px;
+
+  .tablet-up({
+    padding: 16px 20px 0 0;
+    font-size: 19px;
+  });
+
+  &--green {
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    color: @green;
+
+    .tablet-up({
+      width: @col-width;
+      margin-bottom: 0;
+    });
+
+    .desktop-up({
+      padding-left: 62px;
+    });
+  }
+
+  &--green::after {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    margin-left: 20px;
+    background: @green;
+    content: "";
+
+    .tablet-up({
+      display: none;
+    });
   }
 }

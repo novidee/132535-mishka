@@ -1,12 +1,31 @@
 .page-main__header {
   padding: 73px 0;
-  background: @gray--light;
+  background: @gray--lighter;
+
+  .tablet-up({
+    padding: 94px 0 84px;
+  });
+
+  .desktop-up({
+    padding: 96px 0 100px;
+  });
 
   &--bg-image {
     padding-bottom: 120px;
     background-image: url("../img/hero-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: center -16px;
+
+    .tablet-up({
+      padding: 170px 0 370px;
+      background-position: center;
+      background-size: cover;
+    });
+
+    .desktop-up({
+      padding-bottom: 350px;
+      background-size: contain;
+    });
   }
 }
 
@@ -16,4 +35,16 @@
   font-size: 27px;
   line-height: 1.12;
   text-align: center;
+
+  .tablet-up({
+    width: 500px;
+    font-size: 43px;
+    line-height: 1.16;
+  });
+
+  .desktop-up({
+    width: 750px;
+    font-size: 53px;
+    line-height: 1.08;
+  });
 }

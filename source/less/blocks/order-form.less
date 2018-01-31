@@ -1,10 +1,31 @@
 .order-form {
   padding-top: 26px;
+
+  .tablet-up({
+    padding-top: 78px;
+  });
+
+  .desktop-up({
+    padding-top: 124px;
+  });
 }
 
 .order-form__intro {
-  margin: 0 0 30px;
+  max-width: @phone-width - 60px;
+  margin: 0 auto 30px;
   font-size: 13px;
   line-height: 1.85;
   color: @gray--darker;
+
+  .tablet-up({
+    max-width: @tablet-width - 100px;
+    margin-bottom: 14px;
+    font-size: 17px;
+    line-height: 1.76;
+  });
+
+  .desktop-up({
+    max-width: @col-width * 4;
+    margin: 0 auto 60px;
+  });
 }

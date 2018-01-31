@@ -1,16 +1,48 @@
 .featured-product {
   margin-bottom: 36px;
+
+  .tablet-up({
+    margin-bottom: 126px;
+  });
+
+  .desktop-up({
+    margin-bottom: 156px;
+  });
 }
 
 .featured-product__header {
+  position: relative;
   margin-bottom: 30px;
   line-height: 1.2;
+
+  .tablet-up({
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 55px;
+  });
+
+  .desktop-up({
+    margin-bottom: -117px;
+    padding-top: 126px;
+    z-index: 1;
+    justify-content: flex-start;
+  });
 }
 
 .featured-product__title {
   margin: 0;
   margin-bottom: 8px;
   font-size: 25px;
+
+  .tablet-up({
+    .tablet-title();
+  });
+
+  .desktop-up({
+    .desktop-title();
+    order: 1;
+  });
 }
 
 .featured-product__tag {
@@ -18,17 +50,95 @@
   font-weight: bold;
   text-transform: uppercase;
   color: @green;
+
+  .tablet-up({
+    width: 100px;
+    padding-right: 28px;
+    line-height: 1;
+    text-align: center;
+  });
+
+  .desktop-up({
+    width: @col-width;
+    padding: 0 56px 0 46px;
+  });
+}
+
+.featured-product__content {
+  display: flex;
+  flex-direction: column;
+
+  .tablet-up({
+    flex-direction: row;
+  });
+}
+
+.featured-product__info {
+  display: flex;
+  flex-direction: column;
+
+  .tablet-up({
+    flex-basis: 50%;
+    margin-bottom: 112px;
+    padding-right: 40px;
+  });
+
+  .desktop-up({
+    padding: 170px 56px 0 @col-width;
+  });
 }
 
 .featured-product__description {
   margin: 0;
   margin-bottom: 24px;
   color: @gray--darker;
+
+  .tablet-up({
+    margin-top: -0.5em;
+    margin-bottom: 40px;
+    font-size: 17px;
+    line-height: 1.75;
+  });
+
+  .desktop-up({
+    margin-bottom: 60px;
+  });
+}
+
+.featured-product__picture {
+  display: flex;
+  margin-bottom: 28px;
+
+  .tablet-up({
+    order: 2;
+    flex-basis: 50%;
+    margin-bottom: 0;
+  });
 }
 
 .featured-product__image {
   display: block;
-  margin: 0 auto 28px;
+
+  .tablet-up({
+    width: 100%;
+    height: auto;
+    margin: 0;
+  });
+}
+
+.featured-product__buy {
+  .tablet-up({
+    order: 1;
+    align-self: flex-end;
+    flex-basis: 50%;
+    padding-right: 40px;
+    margin-left: -50%;
+  });
+
+  .desktop-up({
+    padding-right: 56px;
+    padding-left: @col-width;
+  });
 }
 
 .featured-product__price {
@@ -37,6 +147,12 @@
   font-weight: bold;
   text-align: center;
   color: @gray--darker;
+
+  .tablet-up({
+    margin-bottom: 36px;
+    font-size: 20px;
+    line-height: 1.2;
+  });
 }
 
 .featured-product__make-order {
