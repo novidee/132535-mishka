@@ -31,8 +31,9 @@
 }
 
 .contacts__title {
-  margin-bottom: 38px;
+  margin-bottom: 26px;
   font-size: 18px;
+  text-indent: -2px;
 
   .tablet-up({
     .tablet-title();
@@ -55,7 +56,7 @@
 }
 
 .contacts__list {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 
   .tablet-up({
     display: flex;
@@ -98,7 +99,12 @@
 }
 
 .contacts__write-wrapper {
-  align-self: center;
+  width: 100%;
+  padding: 0 30px;
+
+  .tablet-up({
+    align-self: center;
+  });
 
   .desktop-up({
     align-self: flex-end;
@@ -106,4 +112,9 @@
     margin-left: -50%;
     padding-left: calc(~"15.2% + 50px");
   });
+}
+
+.contacts__write {
+  width: 100%;
+  letter-spacing: 1px;
 }
