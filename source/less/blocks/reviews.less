@@ -2,8 +2,8 @@
   margin-bottom: 86px;
 
   .tablet-up({
-    margin-bottom: 152px;
-    padding-top: 72px;
+    margin-bottom: 146px;
+    padding-top: 78px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -11,6 +11,7 @@
 
   .desktop-up({
     margin-bottom: 0;
+    padding-top: 72px;
     background-position: 50px top;
     background-size: 350px;
   });
@@ -29,27 +30,26 @@
   margin: 0 0 24px;
   font-size: 25px;
   line-height: 1.2;
-  text-indent: -2px;
+  text-indent: -0.1em;
 
   .tablet-up({
     .tablet-title();
-    margin-bottom: 52px;
+    margin-bottom: 50px;
   });
 
   .desktop-up({
     .desktop-title();
-    margin-bottom: 60px;
   });
 }
 
 .reviews__slider {
   .tablet-up({
     order: 2;
-    padding-bottom: 52px;
+    padding-bottom: 48px;
   });
 
   .desktop-up({
-    padding-bottom: 74px;
+    padding-bottom: 96px;
   });
 }
 
@@ -69,14 +69,14 @@
   color: @gray--darker;
 
   .tablet-up({
-    margin-bottom: 64px;
+    margin-bottom: 58px;
     font-size: 17px;
     line-height: 1.76;
   });
 
   .desktop-up({
-    margin-bottom: 48px;
-    padding-right: 20px;
+    margin-bottom: 36px;
+    padding-right: 100px;
   });
 }
 
@@ -89,6 +89,10 @@
 
   .tablet-up({
     font-size: 18px;
+  });
+
+  .desktop-up({
+    letter-spacing: -0.5px;
   });
 }
 
@@ -110,10 +114,13 @@
 
 .reviews__write {
   width: 100%;
-  letter-spacing: 1px;
 
   .tablet-up({
     width: auto;
-    margin: 6px 0 auto auto;
+    margin: 0 0 auto auto;
+  });
+
+  .desktop-up({
+    margin-top: 8px;
   });
 }

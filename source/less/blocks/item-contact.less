@@ -16,7 +16,7 @@
 
   .desktop-up({
     flex-basis: auto;
-    margin-bottom: 36px;
+    margin-bottom: 32px;
   });
 
   &:last-child {
@@ -28,13 +28,15 @@
   padding-right: 30px;
 
   .tablet-up({
-    padding-right: 26px;
+    padding-right: 24px;
   });
 }
 
 .item-contact__value {
   &--address {
-    padding-right: 30px;
+    .tablet-down({
+      padding-right: 30px;
+    });
   }
 
   &--email {
