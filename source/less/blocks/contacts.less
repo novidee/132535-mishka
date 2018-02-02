@@ -123,17 +123,14 @@
 }
 
 .contacts__write-wrapper {
-  width: 100%;
+  max-width: @phone-width;
+  align-self: center;
   padding: 0 30px;
-
-  .tablet-up({
-    align-self: center;
-    width: auto;
-  });
 
   .desktop-up({
     align-self: flex-end;
     flex-basis: 50%;
+    max-width: initial;
     margin-left: -50%;
     padding-left: calc(~"15.2% + 50px");
   });
