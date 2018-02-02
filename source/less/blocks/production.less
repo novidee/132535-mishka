@@ -54,6 +54,7 @@
   });
 
   .desktop-up({
+    flex-direction: column;
     max-width: 300px;
     margin: 0;
     padding-top: 44px;
@@ -62,15 +63,23 @@
 
   &::before {
     display: inline-block;
-    padding-left: 56px;
+    flex-shrink: 0;
+    width: 32px;
+    margin-right: 24px;
     background-image: url("../img/icon-video.svg");
     background-repeat: no-repeat;
     background-position: 0 5px;
     content: "";
 
     .tablet-up({
-      padding-left: 66px;
+      margin-right: 34px;
       background-position: 0 -5px;
+    });
+
+    .desktop-up({
+      margin-bottom: 26px;
+      height: 26px;
+      background-position: 0 -2px;
     });
   }
 }
@@ -103,7 +112,7 @@
 
   .desktop-up({
     flex-basis: 100%;
-    margin: -29% 0 0 65%;
+    margin: -30.4% 0 0 65%;
     padding: 40px 52px 0 78px;
   });
 }
