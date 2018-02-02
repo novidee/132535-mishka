@@ -18,7 +18,7 @@
   transition: box-shadow @transition;
 
   .tablet-up({
-    padding: 30px 42px 46px;
+    padding: 30px 40px 46px;
   });
 
   .desktop-up({
@@ -48,7 +48,7 @@
   line-height: 1.4;
 
   .tablet-up({
-    margin-bottom: 36px;
+    margin-bottom: 32px;
     font-size: 20px;
     line-height: 1.2;
   });
@@ -67,6 +67,11 @@
     background-repeat: no-repeat;
     background-position: 0 5px;
     content: "";
+
+    .tablet-up({
+      padding-left: 66px;
+      background-position: 0 -5px;
+    });
   }
 }
 
@@ -75,7 +80,7 @@
 
   .tablet-up({
     order: -1;
-    margin: -30px -43px 38px;
+    margin: -30px -41px 38px;
   });
 
   .desktop-up({
@@ -91,7 +96,7 @@
   color: @gray--darker;
 
   .tablet-up({
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     font-size: 15px;
     line-height: 2;
   });
