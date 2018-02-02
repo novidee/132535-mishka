@@ -22,6 +22,10 @@
     .tablet-up({
       padding: 53px 0;
     });
+
+    .desktop-up({
+      padding: 50px 0;
+    });
   }
 
   &--fullname .container {
@@ -82,6 +86,7 @@
   });
 
   .desktop-up({
+    width: @col-width;
     padding-left: 62px;
   });
 
@@ -106,12 +111,21 @@
   flex-wrap: wrap;
 }
 
+.form__fields--checkboxes {
+  .desktop-up({
+    padding-right: @col-width / 2;
+  });
+}
+
 .form__fields--checkboxes .form__field {
   .tablet-up({
     flex-basis: 100% / 2;
     &:nth-of-type(-n + 2) {
       margin-top: 0;
     }
+  });
+
+  .tablet-up-desktop({
     &:nth-child(even) {
       border-left: 12px solid transparent;
     }
@@ -170,6 +184,10 @@
     font-size: 17px;
     line-height: 1.76;
   });
+
+  .desktop-up({
+    margin-bottom: 0;
+  })
 }
 
 .form__submit-button {
