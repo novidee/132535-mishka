@@ -24,8 +24,9 @@
   }
 }
 
-.custom-toggler-container() {
+.custom-toggler-container(@size) {
   position: relative;
+  min-height: @size;
   padding-left: 63px;
 }
 
@@ -34,7 +35,7 @@
 
   display: inline-flex;
   align-items: center;
-  min-height: @size;
+  // min-height: @size;
   transition: color @transition;
 
   &::before,
