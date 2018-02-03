@@ -6,12 +6,17 @@
   font-style: normal;
   line-height: 2;
   color: @gray--darker;
+  word-break: break-word;
 
   .tablet-up({
     flex-basis: 50%;
     margin: 0;
     font-size: 17px;
     line-height: 1.76;
+  });
+
+  .tablet-up-desktop({
+    max-width: 50%;
   });
 
   .desktop-up({
@@ -25,6 +30,7 @@
 }
 
 .item-contact__field {
+  flex-shrink: 0;
   padding-right: 30px;
 
   .tablet-up({
