@@ -56,9 +56,7 @@
   .desktop-up({
     margin-bottom: 56px;
   });
-  // !!! Стили для иконок в блоке преимуществ на главной, позиционирование задаю
-  // через background-position. Есть несоответствия макету, можно ли на них
-  // закрыть глаза?
+
   &::before {
     display: block;
     width: 52px;
@@ -68,6 +66,12 @@
   }
 
   &--purity {
+    padding-right: 26%;
+
+    .tablet-up({
+      padding-right: 17%;
+    });
+
     &::before {
       background-image: url("../img/icon-feature-flower.svg");
       background-position: 8px 4px;
@@ -75,8 +79,11 @@
   }
 
   &--love {
+    padding-right: 16%;
+
     .tablet-up({
       order: 1;
+      padding-right: 10%;
     });
 
     &::before {
@@ -86,6 +93,8 @@
   }
 
   &--style {
+    padding-right: 15%;
+
     .tablet-up({
       order: 2;
     });
@@ -108,7 +117,10 @@
   }
 
   &--likes {
+    padding-right: 25%;
+
     .tablet-up({
+      padding-right: 16%;
       order: 4;
     });
 
@@ -119,8 +131,11 @@
   }
 
   &--gift {
+    padding-right: 20%;
+
     .tablet-up({
       order: 5;
+      padding-right: 15%;
     });
 
     &::before {
