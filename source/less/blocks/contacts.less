@@ -7,7 +7,7 @@
 
   .desktop-up({
     margin-bottom: 105px;
-    padding-top: 230px;
+    padding-top: 188px;
   });
 }
 
@@ -31,17 +31,41 @@
 }
 
 .contacts__title {
-  margin-bottom: 38px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
   font-size: 18px;
+  text-indent: -0.1em;
+
+  &::after {
+    .tablet-up({
+      content: "";
+      display: inline-block;
+      width: 47px;
+      height: 81px;
+      margin-top: -16px;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+    });
+
+    .desktop-up({
+      order: -1;
+      width: @col-width;
+      margin-top: -6px;
+      background-position: center;
+    });
+  }
 
   .tablet-up({
     .tablet-title();
-    margin-bottom: 60px;
+    margin-bottom: 34px;
   });
 
   .desktop-up({
     .desktop-title();
-    margin-bottom: -126px;
+    justify-content: flex-start;
+    margin-bottom: -144px;
+    margin-left: -@col-width;
   });
 }
 
@@ -55,18 +79,19 @@
 }
 
 .contacts__list {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 
   .tablet-up({
     display: flex;
     align-items: flex-start;
+    margin-bottom: 58px;
   });
 
   .desktop-up({
     flex-direction: column;
     flex-basis: 50%;
     margin-bottom: 124px;
-    padding-top: 180px;
+    padding-top: 176px;
     padding-right: 50px;
   });
 }
@@ -98,12 +123,23 @@
 }
 
 .contacts__write-wrapper {
+  max-width: @phone-width;
   align-self: center;
+  padding: 0 30px;
 
   .desktop-up({
     align-self: flex-end;
     flex-basis: 50%;
+    max-width: initial;
     margin-left: -50%;
     padding-left: calc(~"15.2% + 50px");
+  });
+}
+
+.contacts__write {
+  width: 100%;
+
+  .desktop-up({
+    width: auto;
   });
 }

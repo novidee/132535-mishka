@@ -1,9 +1,10 @@
 .advantages {
-  margin-bottom: 58px;
+  margin-bottom: 54px;
   line-height: 1.2;
+  word-break: break-word;
 
   .tablet-up({
-    margin-bottom: 80px;
+    margin-bottom: 82px;
   });
 
   .desktop-up({
@@ -20,10 +21,11 @@
 .advantages__title {
   margin: 0 0 30px;
   font-size: 25px;
+  text-indent: -0.1em;
 
   .tablet-up({
     .tablet-title();
-    margin-bottom: 45px;
+    margin-bottom: 48px;
   });
 
   .desktop-up({
@@ -47,39 +49,100 @@
 
   .tablet-up({
     flex-basis: 50%;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
     font-size: 20px;
     line-height: 1.1;
   });
 
+  .desktop-up({
+    margin-bottom: 56px;
+  });
+
+  &::before {
+    display: block;
+    width: 52px;
+    height: 54px;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &--purity {
+    padding-right: 26%;
+
+    .tablet-up({
+      padding-right: 17%;
+    });
+
+    &::before {
+      background-image: url("../img/icon-feature-flower.svg");
+      background-position: 8px 4px;
+    }
+  }
+
   &--love {
+    padding-right: 16%;
+
     .tablet-up({
       order: 1;
+      padding-right: 10%;
     });
+
+    &::before {
+      background-image: url("../img/icon-feature-ball.svg");
+      background-position: 4px 2px;
+    }
   }
 
   &--style {
+    padding-right: 15%;
+
     .tablet-up({
       order: 2;
     });
+
+    &::before {
+      background-image: url("../img/icon-feature-money.svg");
+      background-position: 0 4px;
+    }
   }
 
   &--support {
     .tablet-up({
       order: 3;
     });
+
+    &::before {
+      background-image: url("../img/icon-feature-rocket.svg");
+      background-position: -2px 2px;
+    }
   }
 
   &--likes {
+    padding-right: 25%;
+
     .tablet-up({
+      padding-right: 16%;
       order: 4;
     });
+
+    &::before {
+      background-image: url("../img/icon-feature-heart.svg");
+      background-position: 8px 6px;
+    }
   }
 
   &--gift {
+    padding-right: 20%;
+
     .tablet-up({
       order: 5;
+      padding-right: 15%;
     });
+
+    &::before {
+      background-image: url("../img/icon-feature-gift.svg");
+      background-position: 2px 0;
+    }
   }
 
   &:last-child {

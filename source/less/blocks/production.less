@@ -13,12 +13,12 @@
 .production__card {
   display: flex;
   flex-direction: column;
-  padding: 30px 34px 34px;
+  padding: 24px 34px 32px;
   border: 1px solid @gray;
   transition: box-shadow @transition;
 
   .tablet-up({
-    padding: 30px 42px 46px;
+    padding: 30px 40px 46px;
   });
 
   .desktop-up({
@@ -42,31 +42,54 @@
 }
 
 .production__title {
-  margin: 0 0 26px;
-  padding-left: 56px;
+  display: flex;
+  margin: 0 0 25px;
   font-size: 17px;
   line-height: 1.4;
 
   .tablet-up({
-    margin-bottom: 36px;
+    margin-bottom: 32px;
     font-size: 20px;
     line-height: 1.2;
   });
 
   .desktop-up({
+    flex-direction: column;
     max-width: 300px;
     margin: 0;
     padding-top: 44px;
     padding-left: 78px;
   });
+
+  &::before {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 32px;
+    margin-right: 24px;
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    content: "";
+
+    .tablet-up({
+      margin-right: 34px;
+      background-position: 0 -5px;
+    });
+
+    .desktop-up({
+      margin-bottom: 26px;
+      height: 26px;
+      background-position: 0 -2px;
+    });
+  }
 }
 
 .production__media {
-  margin: 0 -35px 34px;
+  margin: 0 -35px 28px;
 
   .tablet-up({
     order: -1;
-    margin: -30px -43px 38px;
+    margin: -30px -41px 38px;
   });
 
   .desktop-up({
@@ -76,26 +99,27 @@
 }
 
 .production__intro {
-  margin: 0 0 30px;
+  margin: 0 0 24px;
   font-size: 13px;
   line-height: 1.85;
   color: @gray--darker;
 
   .tablet-up({
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     font-size: 15px;
     line-height: 2;
   });
 
   .desktop-up({
     flex-basis: 100%;
-    margin: -29% 0 0 65%;
-    padding: 40px 52px 0 78px;
+    margin: -30.4% 0 0 65%;
+    padding: 40px 52px 15% 78px;
   });
 }
 
 .production__make-order {
   width: 100%;
+  max-width: 100%;
   padding: 15px;
 
   .desktop-up({

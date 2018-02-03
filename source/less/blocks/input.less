@@ -5,13 +5,24 @@
     display: flex;
     align-items: center;
   });
+
+  &--email {
+    margin-top: 30px;
+
+    .tablet-up({
+      margin-top: 24px;
+    });
+  }
 }
 
 .input__label {
   .form-label();
 
+  line-height: 1.14;
+  word-break: normal;
+
   .tablet-up({
-    padding-right: 30px;
+    padding-right: 26px;
     font-size: 19px;
   });
 
@@ -28,11 +39,12 @@
     color: @green;
 
     .tablet-up({
-      width: @col-width;
+      width: @tablet-col-width;
       margin-bottom: 0;
     });
 
     .desktop-up({
+      width: @col-width;
       padding-left: 62px;
     });
   }
@@ -69,7 +81,7 @@
   transition: border-color @transition;
 
   .tablet-up({
-    padding: 14px 0 14px 18px;
+    padding: 14px 0 14px 16px;
     font-size: 19px;
   });
 

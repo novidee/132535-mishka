@@ -6,6 +6,7 @@
   font-style: normal;
   line-height: 2;
   color: @gray--darker;
+  word-break: break-word;
 
   .tablet-up({
     flex-basis: 50%;
@@ -14,9 +15,13 @@
     line-height: 1.76;
   });
 
+  .tablet-up-desktop({
+    max-width: 50%;
+  });
+
   .desktop-up({
     flex-basis: auto;
-    margin-bottom: 36px;
+    margin-bottom: 32px;
   });
 
   &:last-child {
@@ -25,14 +30,21 @@
 }
 
 .item-contact__field {
-  padding-right: 32px;
+  flex-shrink: 0;
+  padding-right: 30px;
 
   .tablet-up({
-    padding-right: 26px;
+    padding-right: 24px;
   });
 }
 
 .item-contact__value {
+  &--address {
+    .tablet-down({
+      padding-right: 30px;
+    });
+  }
+
   &--email {
     text-decoration: none;
     color: inherit;

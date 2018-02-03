@@ -1,8 +1,14 @@
 .radiobutton {
-  .custom-toggler-container();
+  .custom-toggler-container(40px);
+
+  margin-top: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
   .tablet-up({
-    padding-left: 80px;
+    min-height: 52px;
+    margin-top: 24px;
+    padding: 12px 0 12px 80px;
   });
 }
 
@@ -22,9 +28,8 @@
 }
 
 .radiobutton__label {
-  .custom-toggler-label(38px);
+  .custom-toggler-label(40px);
   .tablet-up({
-    min-height: 52px;
     font-size: 19px;
   });
 

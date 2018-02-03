@@ -25,6 +25,10 @@
   &:focus {
     border-color: @green;
   }
+
+  .tablet-up({
+    padding: 12px;
+  });
 }
 
 .textarea__label {
@@ -50,11 +54,12 @@
     color: @green;
 
     .tablet-up({
-      width: @col-width;
+      width: @tablet-col-width;
       margin-bottom: 0;
     });
 
     .desktop-up({
+      width: @col-width;
       padding-left: 62px;
     });
   }
