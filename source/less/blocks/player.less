@@ -7,12 +7,6 @@
   display: inline-block;
   width: 100%;
   height: auto;
-
-  //todo убрать высоту и фон во время задания адаптивных изображений
-  .tablet-up({
-    height: 455px;
-    background: gray;
-  });
 }
 
 .player__start {
@@ -22,7 +16,7 @@
   display: block;
   width: 101px;
   height: 77px;
-  background: @green;
+  background-image: url("@{images-source}/icon-play.svg");
   cursor: pointer;
   transition: @transition;
   transform: translate(-50%, -50%);
