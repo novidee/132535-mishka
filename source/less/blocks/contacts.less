@@ -115,7 +115,6 @@
 .contacts__map {
   display: block;
   width: 100%;
-  object-fit: cover;
 
   .desktop-up({
     height: auto;
@@ -124,8 +123,11 @@
 
 .contacts__write-wrapper {
   max-width: @phone-width;
-  align-self: center;
   padding: 0 30px;
+
+  .tablet-up({
+    align-self: center;
+  });
 
   .desktop-up({
     align-self: flex-end;
