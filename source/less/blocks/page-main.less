@@ -11,10 +11,12 @@
   });
 
   &--bg-image {
+    .adaptive-image("hero");
+
     padding-bottom: 122px;
     background-color: @gray--lighter;
-    background-image: url("../img/hero-mobile@1x.jpg");
     background-repeat: no-repeat;
+    background-size: 575px auto;
     background-position: center -16px;
 
     .tablet-up({

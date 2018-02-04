@@ -98,6 +98,50 @@
   }
 }
 
+.retina(@rules) {
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    @rules();
+  }
+}
+
+.tablet-retina(@rules) {
+  @media (min-resolution: @retina-dpi) and (min-width: @tablet-width),
+    (min-resolution: @retina-dppx) and (min-width: @tablet-width) {
+    @rules();
+  }
+}
+
+.desktop-retina(@rules) {
+  @media (min-resolution: @retina-dpi) and (min-width: @desktop-width),
+    (min-resolution: @retina-dppx) and (min-width: @desktop-width) {
+    @rules();
+  }
+};
+
+.adaptive-image(@name) {
+  background-image: url("@{images-source}/@{name}-mobile@1x.jpg");
+
+  .tablet-up({
+    background-image: url("@{images-source}/@{name}-tablet@1x.jpg");
+  });
+
+  .desktop-up({
+    background-image: url("@{images-source}/@{name}-desktop@1x.jpg");
+  });
+
+  .retina({
+    background-image: url("@{images-source}/@{name}-mobile@2x.jpg");
+  });
+
+  .tablet-retina({
+    background-image: url("@{images-source}/@{name}-tablet@2x.jpg");
+  });
+
+  .desktop-retina({
+    background-image: url("@{images-source}/@{name}-desktop@2x.jpg");
+  });
+}
+
 .tablet-title {
   font-size: 43px;
   line-height: 1.16;
