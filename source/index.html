@@ -82,7 +82,7 @@
         </div>
       </section>
       <section class="featured-product">
-        <div class="container">
+        <div class="featured-product__container container">
           <header class="featured-product__header">
             <h2 class="featured-product__title">Вязаные корзинки</h2>
             <small class="featured-product__tag">Товар недели</small>
@@ -159,9 +159,17 @@
             </ul>
             <p class="reviews__togglers slider__controls">
               <button class="slider__prev" type="button"
-                aria-label="Предыдущий отзыв">--</button>
+                aria-label="Предыдущий отзыв">
+                  <svg width="50" height="26">
+                    <use xlink:href="img/sprite.svg#icon-left-arrow"></use>
+                  </svg>
+                </button>
               <button class="slider__next" type="button"
-                aria-label="Следующий отзыв">--</button>
+                aria-label="Следующий отзыв">
+                <svg width="50" height="26">
+                  <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
+                </svg>
+              </button>
             </p>
           </div>
           <a class="reviews__write button" href="#">Написать</a>
