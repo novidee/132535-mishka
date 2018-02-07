@@ -1,4 +1,5 @@
 .page-main__header {
+  position: relative;
   padding: 71px 0 76px;
   background: @gray--light;
 
@@ -9,6 +10,28 @@
   .desktop-up({
     padding-bottom: 100px;
   });
+
+  &::after {
+    .tablet-up({
+      position: absolute;
+      bottom: -14px;
+      left: 50%;
+      z-index: 1;
+      width: 100%;
+      max-width: @tablet-width;
+      height: 24px;
+      background-image: url("@{images-source}/bg-zigzag-fill.svg");
+      background-size: 770px 24px;
+      transform: translateX(-50%);
+      content: "";
+    });
+
+    .desktop-up({
+      bottom: -9px;
+      max-width: @desktop-width;
+      background-size: 100% 37px;
+    });
+  }
 
   &--bg-image {
     .adaptive-image("hero");
@@ -28,6 +51,13 @@
     .desktop-up({
       padding-bottom: 478px;
       background-size: contain;
+    });
+  }
+
+  &--bg-image::after {
+    .desktop-up({
+      max-width: @desktop-width - 20px;
+      background-size: auto 37px;
     });
   }
 }
