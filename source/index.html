@@ -213,9 +213,11 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__container container">
-        <a class="page-footer__logo">
-          <img class="page-footer__logo-image" src="img/logo-mobile.svg"
-            width="102" height="34" alt="Интернет-магазин «Мишка»">
+        <a class="page-footer__logo" aria-hidden="true">
+          <svg class="page-footer__logo-image"
+            width="102" height="34">
+            <use xlink:href="img/sprite.svg#logo-footer"></use>
+          </svg>
         </a>
         <div class="page-footer__socials socials">
           <ul class="socials__list">
@@ -248,7 +250,10 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <b class="copyright__text">Разработано</b>
-            <span class="visually-hidden">HTML Academy</span>
+            <svg class="copyright__icon" width="27" height="34"
+              aria-label="HTML Academy">
+              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+            </svg>
           </a>
         </div>
       </div>

@@ -28,10 +28,19 @@
 .page-footer__logo-image {
   display: none;
   height: auto;
+  transition: @transition;
 
   .tablet-up({
     display: block;
   });
+
+  &:hover {
+    fill: @green--dark;
+  }
+
+  &:active {
+    opacity: @active-opacity;
+  }
 }
 
 .page-footer__socials {

@@ -1,13 +1,30 @@
 .copyright__link {
+  display: flex;
+  justify-content: center;
   text-decoration: none;
   color: black;
-  transition: color @transition;
+  transition: opacity @transition;
+
+  .tablet-up({
+    justify-content: flex-end;
+    padding-top: 8px;
+  });
+
+  &:hover .copyright__icon {
+    fill: @green--dark;
+  }
 
   &:active {
-    color: fade(black, @active-opacity * 100%);
+    opacity: @active-opacity;
   }
 }
 
 .copyright__text {
+  margin-right: 30px;
   font-size: 19px;
+}
+
+.copyright__icon {
+  fill: @green;
+  transition: @transition;
 }

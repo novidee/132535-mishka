@@ -186,28 +186,37 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__container container">
-        <a class="page-footer__logo" href="index.html">
-          <img class="page-footer__logo-image" src="img/logo-mobile.svg"
-            width="102" height="34" alt="Интернет-магазин «Мишка»">
+        <a class="page-footer__logo" href="index.html"
+          aria-label="Интернет магазин «Мишка»">
+          <svg class="page-footer__logo-image"
+            width="102" height="34">
+            <use xlink:href="img/sprite.svg#logo-footer"></use>
+          </svg>
         </a>
         <div class="page-footer__socials socials">
           <ul class="socials__list">
             <li>
-              <a class="socials__link socials__link--instagram"
-                href="https://www.instagram.com/htmlacademy">
-                <span class="visually-hidden">Мы в Инстаграме</span>
+              <a href="https://www.instagram.com/htmlacademy"
+                aria-label="Мы в Инстаграме">
+                <svg class="socials__icon" width="22" height="22">
+                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                </svg>
               </a>
             </li>
             <li>
-              <a class="socials__link socials__link--facebook"
-                href="https://www.facebook.com/htmlacademy">
-                <span class="visually-hidden">Мы в Фейсбуке</span>
+              <a href="https://www.facebook.com/htmlacademy"
+                aria-label="Мы в Фейсбуке">
+                <svg class="socials__icon" width="15" height="29">
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                </svg>
               </a>
             </li>
             <li>
-              <a class="socials__link socials__link--twitter"
-                href="https://twitter.com/htmlacademy_ru">
-                <span class="visually-hidden">Мы в Твиттере</span>
+              <a href="https://twitter.com/htmlacademy_ru"
+                aria-label="Мы в Твиттере">
+                <svg class="socials__icon" width="24" height="20">
+                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -215,7 +224,10 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <b class="copyright__text">Разработано</b>
-            <span class="visually-hidden">HTML Academy</span>
+            <svg class="copyright__icon" width="27" height="34"
+              aria-label="HTML Academy">
+              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+            </svg>
           </a>
         </div>
       </div>
