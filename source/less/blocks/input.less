@@ -1,4 +1,5 @@
 .input {
+  position: relative;
   font-size: 0;
 
   .tablet-up({
@@ -13,6 +14,26 @@
       margin-top: 24px;
     });
   }
+}
+
+.input--phone .input__icon {
+  right: 8px;
+  bottom: 18px;
+
+  .tablet-up-desktop({
+    right: 26px;
+    bottom: 16px;
+  });
+}
+
+.input--email .input__icon {
+  right: 4px;
+  bottom: 10px;
+
+  .tablet-up-desktop({
+    right: 22px;
+    bottom: 8px;
+  });
 }
 
 .input__label {
@@ -70,7 +91,7 @@
 
   display: block;
   width: 100%;
-  padding: 15px 0;
+  padding: 15px 40px 15px 0;
   font-size: 17px;
   line-height: 1;
   color: @gray--darker;
@@ -81,7 +102,7 @@
   transition: border-color @transition;
 
   .tablet-up({
-    padding: 14px 0 14px 16px;
+    padding: 14px 60px 14px 16px;
     font-size: 19px;
   });
 
@@ -89,5 +110,20 @@
   &:active,
   &:focus {
     border-color: @green;
+
+    & + .input__icon {
+      fill: @green;
+    }
   }
+}
+
+.input__icon {
+  position: absolute;
+  fill: @gray--dark;
+  transition: fill @transition;
+
+  .tablet-up({
+    right: 0;
+    bottom: 0;
+  });
 }
