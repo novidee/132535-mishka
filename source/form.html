@@ -41,7 +41,7 @@
           <ul class="main-nav__list user-list">
             <li>
               <a class="main-nav__link user-list__link" href="#">
-                <svg class="main-nav__icon" width="18" height="18">
+                <svg class="main-nav__icon" width="18" height="18" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#icon-search"></use>
                 </svg>
                 <span class="user-list__search-text">Поиск по сайту</span>
@@ -50,7 +50,7 @@
             <li>
               <a class="main-nav__link user-list__link user-list__link--cart" href="#">
                 <svg class="main-nav__icon user-list__icon-cart" width="21"
-                  height="18">
+                  height="18" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
                 Корзина: пока пуста
@@ -228,10 +228,11 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
+            aria-label="Разработано HTML Academy">
             <b class="copyright__text">Разработано</b>
             <svg class="copyright__icon" width="27" height="34"
-              aria-label="HTML Academy">
+              aria-hidden="true">
               <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
             </svg>
           </a>
