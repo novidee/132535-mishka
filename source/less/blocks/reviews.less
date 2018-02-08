@@ -17,18 +17,32 @@
     background-size: 350px;
   });
 
-  .retina({
+  .tablet-retina({
     background-image: url("@{images-source}/review@2x.jpg");
   });
 }
 
 .reviews__container {
+  .wave-line();
+
   display: flex;
   flex-wrap: wrap;
 
   .desktop-up({
     padding-left: @col-width + 50px;
   });
+
+  &::after {
+    bottom: -50px;
+
+    .tablet-up({
+      bottom: -84px;
+    });
+
+    .desktop-up({
+      bottom: -90px;
+    });
+  }
 }
 
 .reviews__title {
@@ -114,6 +128,7 @@
 
   .tablet-up({
     margin-bottom: 0;
+    padding-right: 12px;
   });
 }
 
