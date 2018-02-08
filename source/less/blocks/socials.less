@@ -7,25 +7,14 @@
   font-size: 0;
 }
 
-.socials__link {
-  display: inline-block;
-  background-repeat: no-repeat;
+.socials__icon {
+  transition: @transition;
 
-  &--instagram {
-    width: 22px;
-    height: 21px;
-    background-image: url("../img/icon-insta.svg");
+  &:hover {
+    fill: @green--dark;
   }
 
-  &--facebook {
-    width: 15px;
-    height: 28px;
-    background-image: url("../img/icon-fb.svg");
-  }
-
-  &--twitter {
-    width: 23px;
-    height: 20px;
-    background-image: url("../img/icon-twitter.svg");
+  &:active {
+    opacity: @active-opacity;
   }
 }

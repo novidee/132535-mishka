@@ -22,16 +22,26 @@
 .page-footer__logo {
   .tablet-up({
     flex-basis: 100% / 3;
+    margin-top: -6px;
   });
 }
 
 .page-footer__logo-image {
   display: none;
   height: auto;
+  transition: @transition;
 
   .tablet-up({
     display: block;
   });
+
+  &:hover {
+    fill: @green--dark;
+  }
+
+  &:active {
+    opacity: @active-opacity;
+  }
 }
 
 .page-footer__socials {
@@ -52,6 +62,7 @@
 
   .tablet-up({
     flex-basis: 100% / 3;
+    margin-top: -6px;
     text-align: right;
   });
 }

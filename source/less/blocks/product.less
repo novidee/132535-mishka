@@ -128,3 +128,20 @@
 .product__add-to-cart {
   margin-left: auto;
 }
+
+.product__cart-icon {
+  fill: fade(black, 20%);
+  transition: @transition;
+
+  &:hover {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: @active-opacity;
+  }
+
+  .tablet-up-desktop({
+    vertical-align: text-top;
+  });
+}

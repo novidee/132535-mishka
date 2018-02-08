@@ -26,12 +26,22 @@
   border: none;
   background: transparent;
   cursor: pointer;
+  transition: opacity @transition;
+
+  &:hover {
+    opacity: @hover-opacity;
+  }
+
+  &:active {
+    opacity: @active-opacity;
+  }
 }
 
 .slider__prev {
   border-right: 1px solid @gray;
 
   .tablet-up({
+    margin-right: 22px;
     border: none;
   });
 }
