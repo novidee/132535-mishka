@@ -12,6 +12,7 @@ var webp = require(`gulp-webp`);
 var rename = require(`gulp-rename`);
 var del = require(`del`);
 var server = require(`browser-sync`).create();
+var run = require(`run-sequence`);
 
 var sourcePath = `source`;
 var buildPath = `build`;
@@ -30,7 +31,7 @@ gulp.task(`style`, function() {
     .pipe(server.stream());
 });
 
-gulp.task(`images`, function () {
+gulp.task(`images`, function() {
   return gulp.src(`${buildPath}/img/**/*.{png,jpg,svg}`)
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
@@ -46,13 +47,13 @@ gulp.task(`images`, function () {
     .pipe(gulp.dest(`${buildPath}/img`));
 });
 
-gulp.task(`webp`, function () {
+gulp.task(`webp`, function() {
   return gulp.src(`${buildPath}/img/**/*.{png,jpg}`)
     .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest(`${buildPath}/img`));
 });
 
-gulp.task(`sprite`, function () {
+gulp.task(`sprite`, function() {
   return gulp.src(`${buildPath}/img/icon-*.svg`)
     .pipe(imagemin([
       imagemin.svgo({
@@ -68,9 +69,9 @@ gulp.task(`sprite`, function () {
     .pipe(gulp.dest(`${buildPath}/img`));
 });
 
-gulp.task(`serve`, [`style`], function() {
+gulp.task(`serve`, function() {
   server.init({
-    server: `${sourcePath}/`,
+    server: `${buildPath}`,
     notify: false,
     open: true,
     cors: true,
@@ -85,13 +86,26 @@ gulp.task(`clean`, function() {
   return del(buildPath);
 });
 
-gulp.task(`copy`, function () {
+gulp.task(`copy`, function() {
   return gulp.src([
     `${sourcePath}/fonts/**/*.{woff,woff2}`,
     `${sourcePath}/img/**`,
-    `${sourcePath}/js/**`
+    `${sourcePath}/js/**`,
+    `${sourcePath}/*.html`
   ], {
       base: sourcePath
   })
     .pipe(gulp.dest(buildPath));
+});
+
+gulp.task(`build`, function(done) {
+  run(
+    `clean`,
+    `copy`,
+    `style`,
+    `images`,
+    `webp`,
+    `sprite`,
+    done
+  );
 });
