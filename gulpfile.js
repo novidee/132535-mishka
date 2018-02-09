@@ -9,6 +9,7 @@ var minify = require(`gulp-csso`);
 var svgstore = require(`gulp-svgstore`);
 var imagemin = require(`gulp-imagemin`);
 var webp = require(`gulp-webp`);
+var uglify = require('gulp-uglify');
 var rename = require(`gulp-rename`);
 var del = require(`del`);
 var server = require(`browser-sync`).create();
@@ -17,7 +18,7 @@ var run = require(`run-sequence`);
 var sourcePath = `source`;
 var buildPath = `build`;
 
-gulp.task(`style`, function() {
+gulp.task(`styles`, function() {
   gulp.src(`${sourcePath}/less/style.less`)
     .pipe(plumber())
     .pipe(less())
@@ -29,6 +30,15 @@ gulp.task(`style`, function() {
     .pipe(rename(`style.min.css`))
     .pipe(gulp.dest(`${buildPath}/css`))
     .pipe(server.stream());
+});
+
+gulp.task(`scripts`, function() {
+  gulp.src([`${buildPath}/js/**/*.js`, `!${buildPath}/js/**/*.min.js`])
+    .pipe(uglify())
+    .pipe(rename(function(path) {
+      path.basename += `.min`;
+    }))
+    .pipe(gulp.dest(`${buildPath}/js`))
 });
 
 gulp.task(`images`, function() {
@@ -102,7 +112,8 @@ gulp.task(`build`, function(done) {
   run(
     `clean`,
     `copy`,
-    `style`,
+    `styles`,
+    `scripts`,
     `images`,
     `webp`,
     `sprite`,

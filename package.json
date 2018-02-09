@@ -14,6 +14,7 @@
     "gulp-svgstore": "6.1.x",
     "gulp-imagemin": "4.1.x",
     "gulp-webp": "3.0.x",
+    "gulp-uglify": "3.0.x",
     "gulp-rename": "1.2.x",
     "run-sequence": "2.2.x",
     "@htmlacademy/editorconfig-cli": "1.x",
