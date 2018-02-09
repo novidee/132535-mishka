@@ -5,6 +5,9 @@ var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var minify = require("gulp-csso");
+var rename = require("gulp-rename");
+var del = require("del");
 var server = require("browser-sync").create();
 
 gulp.task("style", function() {
@@ -14,7 +17,10 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
@@ -29,4 +35,19 @@ gulp.task("serve", ["style"], function() {
 
   gulp.watch("source/less/**/*.less", ["style"]);
   gulp.watch("source/*.html").on("change", server.reload);
+});
+
+gulp.task("clean", function() {
+  return del("build");
+});
+
+gulp.task("copy", function () {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**"
+  ], {
+      base: "source"
+  })
+    .pipe(gulp.dest("build"));
 });

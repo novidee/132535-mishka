@@ -3,9 +3,6 @@
   "version": "13.0.0",
   "private": true,
   "description": "Личный проект «Мишка» от HTML Academy",
-  "dependencies": {
-    "picturefill": "3.0.x"
-  },
   "devDependencies": {
     "autoprefixer": "7.2.x",
     "browser-sync": "2.23.x",
@@ -13,6 +10,8 @@
     "gulp-less": "3.4.x",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "7.0.x",
+    "gulp-csso": "3.0.1",
+    "gulp-rename": "1.2.2",
     "@htmlacademy/editorconfig-cli": "1.x",
     "stylelint": "8.4.x",
     "stylelint-config-htmlacademy": "0.1.x"
