@@ -12,6 +12,7 @@
     "gulp-postcss": "7.0.x",
     "gulp-csso": "3.0.x",
     "gulp-svgstore": "6.1.x",
+    "gulp-imagemin": "4.1.x",
     "gulp-rename": "1.2.x",
     "@htmlacademy/editorconfig-cli": "1.x",
     "stylelint": "8.4.x",
