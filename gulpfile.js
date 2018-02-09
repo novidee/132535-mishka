@@ -8,6 +8,7 @@ var autoprefixer = require(`autoprefixer`);
 var minify = require(`gulp-csso`);
 var svgstore = require(`gulp-svgstore`);
 var imagemin = require(`gulp-imagemin`);
+var webp = require(`gulp-webp`);
 var rename = require(`gulp-rename`);
 var del = require(`del`);
 var server = require(`browser-sync`).create();
@@ -42,6 +43,12 @@ gulp.task(`images`, function () {
         }]
       })
     ]))
+    .pipe(gulp.dest(`${buildPath}/img`));
+});
+
+gulp.task(`webp`, function () {
+  return gulp.src(`${buildPath}/img/**/*.{png,jpg}`)
+    .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest(`${buildPath}/img`));
 });
 
