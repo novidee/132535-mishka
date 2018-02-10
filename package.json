@@ -3,9 +3,6 @@
   "version": "13.0.0",
   "private": true,
   "description": "Личный проект «Мишка» от HTML Academy",
-  "dependencies": {
-    "picturefill": "3.0.x"
-  },
   "devDependencies": {
     "autoprefixer": "7.2.x",
     "browser-sync": "2.23.x",
@@ -13,6 +10,14 @@
     "gulp-less": "3.4.x",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "7.0.x",
+    "gulp-csso": "3.0.x",
+    "gulp-svgstore": "6.1.x",
+    "gulp-imagemin": "4.1.x",
+    "gulp-webp": "3.0.x",
+    "gulp-uglify": "3.0.x",
+    "gulp-rename": "1.2.x",
+    "vinyl-paths": "2.1.x",
+    "run-sequence": "2.2.x",
     "@htmlacademy/editorconfig-cli": "1.x",
     "stylelint": "8.4.x",
     "stylelint-config-htmlacademy": "0.1.x"
@@ -21,8 +26,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint 'source/less/**/*.less' --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp style",
-    "start": "gulp serve"
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
   },
   "browserslist": [
     "last 2 versions",
