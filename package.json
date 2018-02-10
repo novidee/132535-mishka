@@ -16,6 +16,7 @@
     "gulp-webp": "3.0.x",
     "gulp-uglify": "3.0.x",
     "gulp-rename": "1.2.x",
+    "vinyl-paths": "2.1.x",
     "run-sequence": "2.2.x",
     "@htmlacademy/editorconfig-cli": "1.x",
     "stylelint": "8.4.x",

@@ -14,6 +14,7 @@ var rename = require(`gulp-rename`);
 var del = require(`del`);
 var server = require(`browser-sync`).create();
 var run = require(`run-sequence`);
+var vinylPaths = require('vinyl-paths');
 
 var sourcePath = `source`;
 var buildPath = `build`;
@@ -26,6 +27,7 @@ gulp.task(`styles`, function() {
       autoprefixer()
     ]))
     .pipe(gulp.dest(`${buildPath}/css`))
+    .pipe(vinylPaths(del))
     .pipe(minify())
     .pipe(rename(`style.min.css`))
     .pipe(gulp.dest(`${buildPath}/css`))
@@ -33,7 +35,7 @@ gulp.task(`styles`, function() {
 });
 
 gulp.task(`scripts`, function() {
-  gulp.src([`${buildPath}/js/**/*.js`, `!${buildPath}/js/**/*.min.js`])
+  gulp.src([`${sourcePath}/js/**/*.js`, `!${sourcePath}/js/**/*.min.js`])
     .pipe(uglify())
     .pipe(rename(function(path) {
       path.basename += `.min`;
@@ -88,7 +90,8 @@ gulp.task(`serve`, function() {
     ui: false
   });
 
-  gulp.watch(`${sourcePath}/less/**/*.less`, [`style`]);
+  gulp.watch(`${sourcePath}/less/**/*.less`, [`styles`]);
+  gulp.watch(`${sourcePath}/js/**/*.js`, [`scripts`]);
   gulp.watch(`${sourcePath}/*.html`).on(`change`, server.reload);
 });
 
@@ -100,7 +103,6 @@ gulp.task(`copy`, function() {
   return gulp.src([
     `${sourcePath}/fonts/**/*.{woff,woff2}`,
     `${sourcePath}/img/**`,
-    `${sourcePath}/js/**`,
     `${sourcePath}/*.html`
   ], {
       base: sourcePath
