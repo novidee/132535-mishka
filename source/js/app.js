@@ -53,7 +53,6 @@ addToCardButtons = Array.prototype.slice.call(addToCardButtons).map(createModalT
 function createModalTrigger(trigger) {
   if (!trigger) return;
 
-  trigger.removeAttribute("href");
   trigger.addEventListener("click", onModalToggle);
   modal.addEventListener("click", onModalClose);
 }
@@ -65,6 +64,8 @@ function onModalClose(event) {
 }
 
 function onModalToggle(event) {
+  event.preventDefault();
+
   var hiddenClass = "modal--hidden";
   var hasModalOpen = modal.classList.contains(hiddenClass);
 
