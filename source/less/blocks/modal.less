@@ -6,10 +6,17 @@
   width: 100%;
   height: 100%;
   background: fade(white, 90%);
+  opacity: 1;
+  transition: @transition;
 
   &--hidden {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
+}
+
+.modal--hidden .modal__container {
+  transform: translate(-50%, -100%) scale(0.8);
 }
 
 .modal__container {
@@ -22,6 +29,8 @@
   background: white;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
   transform: translate(-50%, -50%);
+  transition: transform @transition;
+  will-change: transform;
 
   .tablet-up({
     width: 566px;

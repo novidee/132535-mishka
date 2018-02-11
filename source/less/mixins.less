@@ -4,6 +4,12 @@
   list-style: none;
 }
 
+.prevent-manipulations() {
+  &:not([href]) {
+    pointer-events: none;
+  }
+}
+
 .form-label() {
   display: inline-block;
   font-size: 17px;
