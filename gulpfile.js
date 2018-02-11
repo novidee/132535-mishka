@@ -92,7 +92,14 @@ gulp.task(`serve`, function() {
 
   gulp.watch(`${sourcePath}/less/**/*.less`, [`styles`]);
   gulp.watch(`${sourcePath}/js/**/*.js`, [`scripts`]);
-  gulp.watch(`${sourcePath}/*.html`).on(`change`, server.reload);
+  gulp.watch(`${sourcePath}/*.html`, [`html`]).on(`change`, server.reload);
+});
+
+gulp.task(`html`, function() {
+  return gulp.src([`${sourcePath}/*.html`], {
+    base: sourcePath
+  })
+    .pipe(gulp.dest(buildPath));
 });
 
 gulp.task(`clean`, function() {
