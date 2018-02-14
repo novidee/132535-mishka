@@ -4,21 +4,12 @@
 
   .tablet-up({
     margin-bottom: 146px;
-    padding-top: 78px;
-    background-image: url("@{images-source}/review@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
   });
 
   .desktop-up({
     margin-bottom: 0;
-    padding-top: 72px;
     background-position: 50px top;
     background-size: 350px;
-  });
-
-  .tablet-retina({
-    background-image: url("@{images-source}/review@2x.jpg");
   });
 }
 
@@ -28,8 +19,22 @@
   display: flex;
   flex-wrap: wrap;
 
+  .tablet-up({
+    padding-top: 78px;
+    background-image: url("@{images-source}/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  });
+
   .desktop-up({
+    padding-top: 72px;
     padding-left: @col-width + 50px;
+    background-position: 50px top;
+    background-size: 350px;
+  });
+
+  .tablet-retina({
+     background-image: url("@{images-source}/review@2x.jpg");
   });
 
   &::after {
