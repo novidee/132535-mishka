@@ -12,16 +12,16 @@
 }
 
 .contacts__wrapper {
-  max-width: @phone-width;
+  width: @phone-width;
   padding: 0 30px;
 
   .tablet-up({
-    max-width: @tablet-width;
+    width: @tablet-width;
     padding: 0 50px;
   });
 
   .desktop-up({
-    max-width: @desktop-width;
+    width: @desktop-width;
     padding-left: @col-width;
   });
 
@@ -94,6 +94,7 @@
   .desktop-up({
     flex-direction: column;
     flex-basis: 50%;
+    min-width: 50%;
     margin-bottom: 124px;
     padding-top: 176px;
     padding-right: 50px;
@@ -113,7 +114,7 @@
     display: flex;
     order: 1;
     flex-basis: 50%;
-    max-width: 50%;
+    min-width: 50%;
     margin: 0;
   });
 }
