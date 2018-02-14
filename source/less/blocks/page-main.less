@@ -36,22 +36,36 @@
   &--bg-image {
     .adaptive-image("hero");
 
-    padding-bottom: 122px;
+    margin-bottom: 26px;
+    padding-bottom: 0;
     background-color: @gray--lighter;
     background-repeat: no-repeat;
     background-size: 575px auto;
     background-position: center -16px;
 
     .tablet-up({
-      padding: 154px 0 494px;
+      margin-bottom: 45px;
+      padding-top: 154px;
       background-position: center;
       background-size: cover;
     });
 
     .desktop-up({
-      padding-bottom: 478px;
+      margin-bottom: 6px;
       background-size: contain;
     });
+
+    .page-main__title {
+      margin-bottom: 122px;
+
+      .tablet-up({
+        margin-bottom: 368px;
+      });
+
+      .desktop-up({
+        margin-bottom: 352px;
+      });
+    }
   }
 
   &--bg-image::after {

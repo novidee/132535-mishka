@@ -1,10 +1,4 @@
 .product-types {
-  margin-bottom: 26px;
-
-  .tablet-up({
-    margin-bottom: 39px;
-  });
-
   .desktop-up({
     margin-bottom: 0;
   });
@@ -15,10 +9,6 @@
 
   .tablet-down({
     padding: 0;
-  });
-
-  .tablet-up({
-    margin-top: -120px;
   });
 }
 
@@ -36,23 +26,26 @@
 .product-types__link {
   position: relative;
   display: block;
-  padding: 27px 28px 30px;
+  padding: 27px 100px 30px 28px;
   font-size: 19px;
   font-weight: bold;
   line-height: 1.26;
   text-decoration: none;
   color: white;
+  word-break: break-all;
   transition: @transition;
 
   .tablet-up({
-    padding: 28px 36px 37px;
+    height: 100%;
+    padding: 28px 100px 37px 36px;
     font-size: 20px;
     line-height: 1.5;
+    transform: translateY(5px);
   });
 
   &:hover {
     .tablet-up({
-      transform: translateY(-5px);
+      transform: translateY(0);
     });
 
     &::after {
@@ -90,6 +83,8 @@
 
   &::after {
     right: 36px;
+    width: 40px;
+    height: 62px;
     content: url("@{images-source}/interior.svg");
   }
 }
@@ -104,6 +99,8 @@
 
   &::after {
     right: 27px;
+    width: 60px;
+    height: 60px;
     content: url("@{images-source}/toy.svg");
 
     .tablet-up({
