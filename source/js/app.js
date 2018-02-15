@@ -47,6 +47,8 @@ var modal = document.querySelector(".modal");
 var orderButton = document.querySelector(".featured-product__make-order");
 var addToCardButtons = document.querySelectorAll(".product__add-to-cart");
 
+modal.addEventListener("click", onModalClose);
+
 createModalTrigger(orderButton);
 addToCardButtons = Array.prototype.slice.call(addToCardButtons).map(createModalTrigger);
 
@@ -54,7 +56,6 @@ function createModalTrigger(trigger) {
   if (!trigger) return;
 
   trigger.addEventListener("click", onModalToggle);
-  modal.addEventListener("click", onModalClose);
 }
 
 function onModalClose(event) {
