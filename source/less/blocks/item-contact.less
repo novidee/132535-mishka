@@ -1,5 +1,6 @@
 .item-contact {
   display: flex;
+  max-width: 100%;
   margin: 0;
   margin-bottom: 30px;
   font-size: 15px;
@@ -31,6 +32,7 @@
 
 .item-contact__field {
   flex-shrink: 0;
+  max-width: 80px;
   padding-right: 30px;
 
   .tablet-up({
@@ -39,6 +41,8 @@
 }
 
 .item-contact__value {
+  align-self: flex-start;
+
   &--address {
     .tablet-down({
       padding-right: 30px;

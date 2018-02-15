@@ -4,9 +4,14 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-header__container container">
         <nav class="main-nav main-nav--nojs">
@@ -43,7 +48,7 @@
             <li>
               <a class="main-nav__link user-list__link" href="#">
                 <svg class="main-nav__icon" width="18" height="18" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                  <use xlink:href="#icon-search"></use>
                 </svg>
                 <span class="user-list__search-text">Поиск по сайту</span>
               </a>
@@ -52,7 +57,7 @@
               <a class="main-nav__link user-list__link user-list__link--cart" href="#">
                 <svg class="main-nav__icon user-list__icon-cart" width="21"
                   height="18" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
                 Корзина: пока пуста
               </a>
@@ -65,22 +70,22 @@
     <main class="page-main">
       <header class="page-main__header page-main__header--bg-image">
         <h1 class="page-main__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
+        <section class="product-types">
+          <div class="product-types__container container">
+            <h2 class="visually-hidden">Типы товаров</h2>
+            <ul class="product-types__list">
+              <li class="product-types__item">
+                <a class="product-types__link product-types__link--interior" href="#">
+                  Предметы<br>интерьера</a>
+              </li>
+              <li class="product-types__item">
+                <a class="product-types__link product-types__link--toys" href="#">
+                  Детские<br>игрушки</a>
+              </li>
+            </ul>
+          </div>
+        </section>
       </header>
-      <section class="product-types">
-        <div class="product-types__container container">
-          <h2 class="visually-hidden">Типы товаров</h2>
-          <ul class="product-types__list">
-            <li class="product-types__item">
-              <a class="product-types__link product-types__link--interior" href="#">
-                Предметы<br>интерьера</a>
-            </li>
-            <li class="product-types__item">
-              <a class="product-types__link product-types__link--toys" href="#">
-                Детские<br>игрушки</a>
-            </li>
-          </ul>
-        </div>
-      </section>
       <section class="featured-product">
         <div class="container">
           <header class="featured-product__header">
@@ -170,13 +175,13 @@
               <button class="slider__prev" type="button"
                 aria-label="Предыдущий отзыв">
                   <svg width="50" height="26">
-                    <use xlink:href="img/sprite.svg#icon-left-arrow"></use>
+                    <use xlink:href="#icon-left-arrow"></use>
                   </svg>
                 </button>
               <button class="slider__next" type="button"
                 aria-label="Следующий отзыв">
                 <svg width="50" height="26">
-                  <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
+                  <use xlink:href="#icon-right-arrow"></use>
                 </svg>
               </button>
             </p>
@@ -201,8 +206,8 @@
               </span>
             </p>
           </address>
-          <div class="contacts__map-wrapper">
-            <picture>
+          <div class="contacts__map-wrapper map">
+            <picture class="map__picture">
               <source type="image/webp" media="(min-width: 1150px)" srcset="
                 img/map-desktop@1x.webp 1x,
                 img/map-desktop@2x.webp 2x">
@@ -218,7 +223,7 @@
               <source media="(min-width: 768px)" srcset="
                 img/map-tablet@1x.jpg 1x,
                 img/map-tablet@2x.jpg 2x">
-              <img class="contacts__map" src="img/map-mobile@1x.jpg"
+              <img class="contacts__map-image map__image" src="img/map-mobile@1x.jpg"
                 srcset="img/map-mobile@2x.jpg 2x"
                 alt="Местонахождение магазина на карте">
             </picture>
@@ -234,32 +239,32 @@
         <a class="page-footer__logo" aria-hidden="true">
           <svg class="page-footer__logo-image"
             width="102" height="34">
-            <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
+            <use xlink:href="#icon-logo-footer"></use>
           </svg>
         </a>
         <div class="page-footer__socials socials">
           <ul class="socials__list">
-            <li>
+            <li class="socials__item">
               <a href="https://www.instagram.com/htmlacademy"
                 aria-label="Мы в Инстаграме">
-                <svg class="socials__icon" width="22" height="22">
-                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                <svg class="socials__icon" width="22" height="23">
+                  <use xlink:href="#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="socials__item">
               <a href="https://www.facebook.com/htmlacademy"
                 aria-label="Мы в Фейсбуке">
                 <svg class="socials__icon" width="15" height="29">
-                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  <use xlink:href="#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="socials__item">
               <a href="https://twitter.com/htmlacademy_ru"
                 aria-label="Мы в Твиттере">
                 <svg class="socials__icon" width="24" height="20">
-                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  <use xlink:href="#icon-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -271,7 +276,7 @@
             <b class="copyright__text">Разработано</b>
             <svg class="copyright__icon" width="27" height="34"
               aria-hidden="true">
-              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+              <use xlink:href="#icon-htmlacademy"></use>
             </svg>
           </a>
         </div>
@@ -304,8 +309,8 @@
         </form>
       </div>
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/picturefill.min.js"></script>
-    <script src="js/svg4everybody.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>

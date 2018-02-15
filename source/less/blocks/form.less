@@ -37,7 +37,8 @@
   &--contacts .container,
   &--note .container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 100%;
 
     .desktop-up({
       padding-right: @col-width + 50px;
@@ -62,6 +63,7 @@
 .form__fieldset-container {
   .tablet-up({
     display: flex;
+    flex-basis: 100%;
   });
 }
 
@@ -119,7 +121,7 @@
 
 .form__fields--checkboxes .form__field {
   .tablet-up({
-    flex-basis: 100% / 2;
+    width: 100% / 2;
     &:nth-of-type(-n + 2) {
       margin-top: 0;
     }
@@ -132,7 +134,7 @@
   });
 
   .desktop-up({
-    flex-basis: 100% / 3;
+    width: 100% / 3;
     &:nth-of-type(-n + 3) {
       margin-top: 0;
     }
@@ -140,7 +142,7 @@
 }
 
 .form__field {
-  flex-basis: 100%;
+  width: 100%;
   margin-top: 21px;
 
   .tablet-up({
@@ -194,9 +196,10 @@
 
 .form__submit-button {
   width: 100%;
+  font-family: @default-font;
 
   .tablet-up({
     width: auto;
-    padding: 15px 28px;
+    padding: 15px 29px;
   });
 }

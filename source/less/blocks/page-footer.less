@@ -15,11 +15,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 143px;
+    padding: 52px 50px;
   });
 }
 
 .page-footer__logo {
+  .prevent-manipulations();
+
   .tablet-up({
     flex-basis: 100% / 3;
     margin-top: -6px;
@@ -28,7 +30,7 @@
 
 .page-footer__logo-image {
   display: none;
-  height: auto;
+  height: 34px;
   transition: @transition;
 
   .tablet-up({
@@ -45,8 +47,9 @@
 }
 
 .page-footer__socials {
-  margin-bottom: 22px;
-  padding: 25px 60px 26px;
+  align-self: center;
+  margin-bottom: 20px;
+  padding: 25px 0 26px;
   border-bottom: 1px solid @gray;
 
   .tablet-up({
@@ -62,7 +65,6 @@
 
   .tablet-up({
     flex-basis: 100% / 3;
-    margin-top: -6px;
     text-align: right;
   });
 }

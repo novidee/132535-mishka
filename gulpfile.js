@@ -11,6 +11,9 @@ var imagemin = require(`gulp-imagemin`);
 var webp = require(`gulp-webp`);
 var uglify = require('gulp-uglify');
 var rename = require(`gulp-rename`);
+var posthtml = require(`gulp-posthtml`);
+var htmlmin = require(`gulp-htmlmin`);
+var include = require(`posthtml-include`);
 var del = require(`del`);
 var server = require(`browser-sync`).create();
 var run = require(`run-sequence`);
@@ -92,7 +95,16 @@ gulp.task(`serve`, function() {
 
   gulp.watch(`${sourcePath}/less/**/*.less`, [`styles`]);
   gulp.watch(`${sourcePath}/js/**/*.js`, [`scripts`]);
-  gulp.watch(`${sourcePath}/*.html`).on(`change`, server.reload);
+  gulp.watch(`${sourcePath}/*.html`, [`html`]).on(`change`, server.reload);
+});
+
+gulp.task(`html`, function () {
+  return gulp.src(`${sourcePath}/*.html`)
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest(`${buildPath}`));
 });
 
 gulp.task(`clean`, function() {
@@ -102,8 +114,7 @@ gulp.task(`clean`, function() {
 gulp.task(`copy`, function() {
   return gulp.src([
     `${sourcePath}/fonts/**/*.{woff,woff2}`,
-    `${sourcePath}/img/**`,
-    `${sourcePath}/*.html`
+    `${sourcePath}/img/**`
   ], {
       base: sourcePath
   })
@@ -119,6 +130,7 @@ gulp.task(`build`, function(done) {
     `images`,
     `webp`,
     `sprite`,
+    `html`,
     done
   );
 });

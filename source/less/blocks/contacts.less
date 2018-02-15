@@ -7,22 +7,22 @@
 
   .desktop-up({
     margin-bottom: 105px;
-    padding-top: 188px;
+    padding-top: 232px;
   });
 }
 
 .contacts__wrapper {
-  max-width: @phone-width;
+  width: @phone-width;
   padding: 0 30px;
 
   .tablet-up({
-    max-width: @tablet-width;
+    width: @tablet-width;
     padding: 0 50px;
   });
 
   .desktop-up({
-    max-width: @desktop-width;
-    padding-left: calc(~"15.2% + 50px");
+    width: @desktop-width;
+    padding-left: @col-width;
   });
 
   .desktop-down({
@@ -41,6 +41,7 @@
     .tablet-up({
       content: "";
       display: inline-block;
+      flex-shrink: 0;
       width: 47px;
       height: 81px;
       margin-top: -16px;
@@ -64,8 +65,8 @@
   .desktop-up({
     .desktop-title();
     justify-content: flex-start;
-    margin-bottom: -144px;
-    margin-left: -@col-width;
+    margin: 0 auto -144px;
+    padding-left: 50px;
   });
 }
 
@@ -75,6 +76,9 @@
 
   .desktop-up({
     flex-direction: row;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 50px;
   });
 }
 
@@ -90,6 +94,7 @@
   .desktop-up({
     flex-direction: column;
     flex-basis: 50%;
+    min-width: 50%;
     margin-bottom: 124px;
     padding-top: 176px;
     padding-right: 50px;
@@ -97,7 +102,9 @@
 }
 
 .contacts__map-wrapper {
+  height: 457px;
   margin: 0 0 40px;
+  overflow: hidden;
 
   .tablet-up({
     margin: 0 0 55px;
@@ -107,13 +114,12 @@
     display: flex;
     order: 1;
     flex-basis: 50%;
+    min-width: 50%;
     margin: 0;
-    padding-right: 50px;
   });
 }
 
-.contacts__map {
-  display: block;
+.contacts__map-image {
   width: 100%;
 
   .desktop-up({
@@ -135,7 +141,7 @@
     flex-basis: 50%;
     max-width: initial;
     margin-left: -50%;
-    padding-left: calc(~"15.2% + 50px");
+    padding-left: @col-width;
   });
 }
 

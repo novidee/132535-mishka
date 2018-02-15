@@ -4,6 +4,12 @@
   list-style: none;
 }
 
+.prevent-manipulations() {
+  &:not([href]) {
+    pointer-events: none;
+  }
+}
+
 .form-label() {
   display: inline-block;
   font-size: 17px;
@@ -16,7 +22,8 @@
 .placeholder() {
   &::placeholder {
     font-size: 17px;
-    line-height: 1;
+    font-family: @default-font;
+    line-height: 1.5;
     color: @gray--dark;
 
     .tablet-up({
