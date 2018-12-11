@@ -14,7 +14,6 @@ var rename = require(`gulp-rename`);
 var posthtml = require(`gulp-posthtml`);
 var htmlmin = require(`gulp-htmlmin`);
 var include = require(`posthtml-include`);
-var del = require(`del`);
 var server = require(`browser-sync`).create();
 var run = require(`run-sequence`);
 var vinylPaths = require('vinyl-paths');
@@ -30,7 +29,6 @@ gulp.task(`styles`, function() {
       autoprefixer()
     ]))
     .pipe(gulp.dest(`${buildPath}/css`))
-    .pipe(vinylPaths(del))
     .pipe(minify())
     .pipe(rename(`style.min.css`))
     .pipe(gulp.dest(`${buildPath}/css`))
@@ -107,10 +105,6 @@ gulp.task(`html`, function () {
     .pipe(gulp.dest(`${buildPath}`));
 });
 
-gulp.task(`clean`, function() {
-  return del(buildPath);
-});
-
 gulp.task(`copy`, function() {
   return gulp.src([
     `${sourcePath}/fonts/**/*.{woff,woff2}`,
@@ -123,7 +117,6 @@ gulp.task(`copy`, function() {
 
 gulp.task(`build`, function(done) {
   run(
-    `clean`,
     `copy`,
     `styles`,
     `scripts`,
